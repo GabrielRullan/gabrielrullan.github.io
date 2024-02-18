@@ -1108,4 +1108,11 @@ section {
 .language-switcher {
   text-align: center; /* Center the dropdown if it's not aligned */
   margin-top: 20px; /* Add some space above the dropdown */
+  width: 30px;
+}
+.flag-icon {
+  max-width: 10px; /* Adjust based on your preference */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make flags rounded */
+  margin-right: 5px; /* Space between flag and text */
 }
