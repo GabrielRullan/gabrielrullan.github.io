@@ -1104,3 +1104,8 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+.language-switcher {
+  text-align: center; /* Center the dropdown if it's not aligned */
+  margin-top: 20px; /* Add some space above the dropdown */
+}
