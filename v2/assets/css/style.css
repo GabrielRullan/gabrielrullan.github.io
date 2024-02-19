@@ -1116,3 +1116,12 @@ section {
   border-radius: 50%; /* Make flags rounded */
   margin-right: 5px; /* Space between flag and text */
 }
+
+.language-picker {
+  display: flex;
+}
+
+.custom-black {
+  background-color: black !important; /* Use !important to override Bootstrap's styles */
+  border-color: black !important; /* Optional: change the border color to match */
+}
