@@ -1,0 +1,223 @@
+nav:
+  hero: Inicio
+  about: Acerca de
+  questions: Preguntas
+  resume: Currículum
+  services: Servicios
+  contact: Contacto
+hero:
+  name: Gabriel Rul-lan
+  typed_prefix: Soy un  de Datos
+  roles: Científico, Analista, Consultor, Freelance, Partner
+  meet_me_text: Agenda una reunión
+  meet_me_link: https://calendar.app.google/YbQTidmXT3Bg9wdY8
+about:
+  title: Soy ...
+  subtitle: '... ¡tu Partner de Datos!'
+  paragraphs:
+  - Soy Gabriel Rul-lan, un desarrollador con una década de experiencia en ingeniería
+    de datos, análisis e inteligencia empresarial.
+  - No estoy aquí solo para ofrecer servicios, sino para convertirme en tu Partner
+    de Datos de confianza, entregando soluciones innovadoras de datos de principio
+    a fin.
+  - Mi objetivo es convertirme en el Partner de Datos de muchas empresas a las cuales
+    las grandes firmas de consultoría realmente no tratarían con cuidado, pero que
+    merecen la calidad de verdaderos expertos en datos.
+questions:
+  title: Preguntas, estoy seguro de que las tienes
+  description:
+  - Muchas empresas no tienen un Partner de Datos, y no saben qué utilidad podría
+    tener para ellas
+  - Aquí hay algunas preguntas que suelo recibir.
+  items:
+  - q: ¿Qué es un Partner de Datos?
+    a: Un Partner de Datos va más allá del papel tradicional de un proveedor de servicios.
+      Como tu Partner de Datos, actúo como una extensión de tu equipo realizando cualquier
+      servicio de datos que puedas necesitar.
+  - q: Suena a consultoría
+    a: Las consultoras suelen intentar capturar clientes para convertirlos en un proyecto
+      inacabable. Mi objetivo es crear sinergias con empresas mediante los proyectos
+      que éstas necesiten.
+  - q: Yo tengo pocos datos, no me interesa algo complicado
+    a: Haremos una solución a medida, con la complejidad adaptada para tu empresa
+      y tus datos.
+  - q: ¿Cuál es el nombre de lo que estás vendiendo?
+    a: No tengo una solución para venderte, trabajo con tus problemas y encuentro
+      tu solución.
+  - q: ¿Por qué no simplemente contratar internamente?
+    a: 'Tiempo y dinero: para comenzar tu viaje de datos necesitarías contratar expertos
+      y, tras montarlo todo, mantenerlos contigo.'
+  - q: ¿Puedes darme un ejemplo?
+    a: Piénsalo como si necesitaras una Oficina de Datos. Vendré, miraremos los requisitos,
+      construiré tu oficina y te mostraré cómo mantenerla y usarla. Luego me mantendré
+      en contacto si necesitas más cosas "grandes". Las operaciones y el día a día
+      serán todos tuyos, sin dependencias adicionales.
+  footer: ¿Quieres ver lo que tus datos pueden hacer por ti? ¡Ve a la sección de servicios!
+skills:
+  title: Habilidades
+  description: Estas son alguna de las habilidades que uso más frecuentemente.
+  items:
+  - name: Estrategia de datos
+    val: 100%
+    width: '100'
+  - name: Gestión de proyectos
+    val: 90%
+    width: '90'
+  - name: Python
+    val: 75%
+    width: '75'
+  - name: Análisis de datos
+    val: 80%
+    width: '80'
+  - name: Business Intelligence
+    val: 90%
+    width: '90'
+  - name: Ingeniería de datos
+    val: 80%
+    width: '80'
+services:
+  title: Servicios
+  description: Como tu Partner de Datos, estoy dedicado a transformar datos complejos
+    en información clara y accionable, asegurando el futuro de tu negocio y adaptando
+    soluciones específicamente para ti. Exploremos cómo podemos aprovechar tus datos
+    para impulsar tu negocio hacia adelante.
+  items:
+  - icon: bi bi-graph-up
+    title: Simplificación de Datos
+    desc: Transforma los datos en decisiones. Unifica fuentes de datos dispares en
+      un sistema cohesivo con herramientas de informes avanzadas para informarte y
+      alertarte sobre métricas críticas de negocio.
+  - icon: bi bi-shield-lock
+    title: Protege el Futuro de Tu Negocio
+    desc: Mantente adelante de las curvas tecnológicas, asegurando que tu negocio
+      se adapte sin problemas a los avances sin el esfuerzo de mantenerse al día con
+      la carrera tecnológica.
+  - icon: bi bi-toggles2
+    title: Soluciones Personalizadas
+    desc: Obtén exactamente lo que necesitas, sin excesos. Proyectos diseñados para
+      adaptarse a tu flujo de trabajo, asegurando comodidad y facilidad de uso sin
+      forzar cambios drásticos.
+  - icon: bi bi-gem
+    title: Descubre Tu Pepita de Oro
+    desc: Descubre las fortalezas y oportunidades clave dentro de tus datos para impulsar
+      tu negocio hacia adelante, enfocándote en el crecimiento sostenible y en insights
+      estratégicos.
+  - icon: bi bi-briefcase
+    title: Reduce Riesgos, Ahorra Dinero
+    desc: Aprovecha decisiones informadas para minimizar riesgos y costos. Un mejor
+      manejo de tus datos significa ahorrar dinero evitando imprevistos.
+  - icon: bi bi-lightbulb
+    title: Generación de Perspectivas
+    desc: Usa tus datos como una bola de cristal para predecir y prepararte para las
+      tendencias futuras. Nuestra experiencia analítica convierte los datos en una
+      herramienta visionaria para tu negocio.
+testimonials:
+  title: Testimonios
+  description: En los más de 10 años trabajando, he colaborado exitosamente con mucha
+    gente, estas son algunas de esas personas.
+  items:
+  - text: Sus habilidades y ética de trabajo son encomiables y han contribuido significativamente
+      al éxito de nuestros proyectos.
+    name: Jacob Kratzsch
+    role: CEO & Fundador
+  - text: Gabriel es un activo valioso para cualquier equipo de ciencia de datos y
+      estoy seguro de que sobresalirá en cualquier futuro empeño.
+    name: Ayo Ayedefa
+    role: Jefe de BI
+  - text: Gabriel es una de las personas más dedicadas, pacientes e innovadoras con
+      las que he tenido el placer de trabajar en cualquier capacidad.
+    name: Xialu Zheng
+    role: Científico de Datos Junior
+  - text: Su experiencia fue crucial en la construcción de nuestra plataforma desde
+      cero, impulsándonos por delante del calendario gracias a su compromiso y habilidad.
+    name: Arjun Katyal
+    role: Jefe de Auditorías Internas
+  - text: Transformó nuestro conjunto de datos, mejorando la toma de decisiones y
+      la eficiencia con su experiencia.
+    name: Ash
+    role: Founder
+contact:
+  title: Contacto
+  description: ¿Listo para transformar tus datos en tu activo más poderoso? Hablemos
+    de cómo podemos adaptar nuestros servicios a tus necesidades únicas y comenzar
+    a construir tu futuro impulsado por datos hoy mismo. Ponte en contacto para discutir
+    tu visión, desafíos y cómo puedo apoyar tu camino hacia la toma de decisiones
+    perspicaz y el crecimiento estratégico. Tus datos tienen una historia que contar,
+    y juntos, podemos convertirla en una historia de éxito.
+  email_label: 'Correo electrónico:'
+  phone_label: 'Teléfono:'
+  telegram_label: 'Telegram:'
+resume:
+  title: Currículum
+  description: Llevo más de diez años trabajando en datos, aquí puedes ver en qué.
+  summary:
+    title: Resumen
+    name: Gabriel Rul-lan
+    text: IT Project Manager Senior con más de 13 años de experiencia en la dirección
+      y ejecución de proyectos de Gobierno del Dato y Analítica Avanzada / Business
+      Intelligence. Certificado PMP® y experto en marcos internacionales (DAMA-DMBOK).
+    bullets:
+    - gabriel@data-partner.xyz
+  education:
+    title: Educación
+    items:
+    - degree: Certificado PMP®
+      year: Actualidad
+      institution: Project Management Institute (PMI)
+    - degree: Master en Administración de Empresas
+      year: '2014'
+      institution: ESERP Business School
+    - degree: Licenciatura en Matemáticas
+      year: '2013'
+      institution: Universitat de les Illes Balears
+  experience_freelance:
+    title: Experiencia Reciente
+    items:
+    - role: Associate Director, R&D Data Governance & Project Lead
+      date: Mayo 2024 - Presente
+      company: AstraZeneca
+      bullets:
+      - Liderazgo del despliegue de Data Domain Working Groups (DDWGs) a nivel corporativo.
+      - Coordinación de la identificación y priorización de Elementos Críticos de
+        Datos (CDEs) e implantación de catálogos.
+    - role: Head of Data & IT Project Manager
+      date: Septiembre 2023 - Marzo 2024
+      company: Start-up (Stealth Mode)
+      bullets:
+      - Definición e implantación del Target Operating Model y roadmap de analítica
+        avanzada basada en IA.
+      - Gestión del equipo técnico de desarrollo y reporte directo al C-Level.
+    - role: Data Partner & Solutions Project Expert
+      date: Enero 2023 - Junio 2023
+      company: Mapfre
+      bullets:
+      - Liderazgo 100% independiente de proyectos analíticos y soluciones en BigQuery,
+        LookerML y SQL.
+    - role: Dynamic Data Specialist / Project Lead - Internal Auditing
+      date: Abril 2022 - Diciembre 2022
+      company: Boehringer Ingelheim
+      bullets:
+      - Desarrollo de soluciones para el análisis masivo de datos orientado a cumplimiento
+        normativo.
+      - Dirección del diseño e implantación de más de 30 cuadros de mando en Power
+        BI.
+    - role: Data Platform Lead & Senior Consultant
+      date: Marzo 2021 - Abril 2022
+      company: Movinga
+      bullets:
+      - Rediseño de pipelines ETL (dbt, Python, Talend) y gobierno de datos MDM.
+      - Mentoring de 4 ingenieros junior.
+  experience_pre_freelance:
+    title: Experiencia Previa
+    items:
+    - role: IT Project Manager & Analytics Specialist
+      date: Agosto 2016 - Octubre 2020
+      company: Advanced Programming Solutions SL (APSL)
+      bullets:
+      - Gestión integral del ciclo de vida de proyectos ágiles (PMP) y consultoría
+        técnica.
+    - role: Business Intelligence Senior Consultant / Project Lead
+      date: Julio 2014 - Febrero 2016
+      company: SDG Group Spain
+      bullets:
+      - Liderazgo de proyectos BI para grandes multinacionales farmacéuticas.

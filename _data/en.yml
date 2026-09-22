@@ -1,0 +1,217 @@
+nav:
+  hero: Home
+  about: About
+  questions: Questions
+  resume: Resume
+  services: Services
+  contact: Contact
+hero:
+  name: Gabriel Rul-lan
+  typed_prefix: I'm a Data
+  roles: Scientist, Analyst, Consultant, Freelancer, Partner
+  meet_me_text: Book a meeting
+  meet_me_link: https://calendar.app.google/YbQTidmXT3Bg9wdY8
+about:
+  title: It's me...
+  subtitle: '... your Data Partner!'
+  paragraphs:
+  - I'm Gabriel Rul-lan, a seasoned developer with a decade of experience in data
+    engineering, analysis, and business intelligence.
+  - I'm here not just to offer services, but to become your trusted Data Partner,
+    delivering end-to-end innovative data solutions.
+  - My aim is to become the Data Partner of many companies to whom it doesn't big
+    consulting firms wouldn't really treat with care, but that deserve the quality
+    of real data experts.
+questions:
+  title: Questions, I'm sure you have them
+  description:
+  - Many companies don't have a Data Partner, and they don't know what use it will
+    be for them
+  - Here are some questions I usually get.
+  items:
+  - q: What is a Data Partner?
+    a: A Data Partner goes beyond the traditional role of a service provider. As your
+      Data Partner, I act as an extension of your team, deeply invested in your success.
+  - q: Is this not consulting?
+    a: Consulting firms often try to capture clients, they are not interested in relationships
+      unless they are long and expensive projects. What I want is to create synergies
+      and only necessary projects.
+  - q: I have limited data, I don't want anything complicated
+    a: We will create a customized solution, with the level of complexity adapted
+      to your company.
+  - q: What is the name of what I am selling?
+    a: I don't have a solution to sell you, I work with your problems and find your
+      solution.
+  - q: Why not just hire internally, if data is so important?
+    a: It is not worth it to have a whole data team in-house, but to begin your data
+      journey you'd need to hire experts, and then keep them with you.
+  - q: Can you give me an example?
+    a: Think of it like you needing a Data Office. I will come, get the requirements,
+      build you office, show you how to mantain it and use it and then just stay in
+      touch if you need more "big" things. The operations and day to day will be all
+      yours, no extra dependencies.
+  footer: You want to see what your data can do for you, go to the services section!
+skills:
+  title: Skills
+  description: Here are some of my most commonly used skills.
+  items:
+  - name: Data Strategy
+    val: 100%
+    width: '100'
+  - name: Project Management
+    val: 90%
+    width: '90'
+  - name: Python
+    val: 75%
+    width: '75'
+  - name: Data Analysis
+    val: 80%
+    width: '80'
+  - name: Business Intelligence
+    val: 90%
+    width: '90'
+  - name: Data Engineering
+    val: 80%
+    width: '80'
+services:
+  title: Services
+  description: As your Data Partner, I'm dedicated to transforming complex data into
+    clear, actionable insights, future-proofing your business, and tailoring solutions
+    specifically for you. Let's explore how we can leverage your data to drive your
+    business forward.
+  items:
+  - icon: bi bi-graph-up
+    title: Data Simplification
+    desc: Transform data into decisions. Unify disparate data sources into a cohesive
+      system with advanced reporting tools to inform and alert you on critical business
+      metrics.
+  - icon: bi bi-shield-lock
+    title: Future-Proof Your Business
+    desc: Stay ahead of technology curves, ensuring your business seamlessly adapts
+      to advancements without the hassle of keeping up with the tech race.
+  - icon: bi bi-toggles2
+    title: Custom Solutions
+    desc: Get exactly what you need, without excess. Projects designed to fit your
+      workflow, ensuring comfort and ease of use without forcing drastic changes.
+  - icon: bi bi-gem
+    title: Discover Your Golden Nugget
+    desc: Uncover the core strengths and opportunities within your data to propel
+      your business forward, focusing on sustainable growth and strategic insights.
+  - icon: bi bi-briefcase
+    title: Reduce Risks, Save Money
+    desc: Leverage informed decisions to minimize risks and costs. A better grasp
+      on your data means saving money by avoiding unforeseen pitfalls.
+  - icon: bi bi-lightbulb
+    title: Insight Generation
+    desc: Use your data as a crystal ball to predict and prepare for future trends.
+      Our analytical expertise turns data into a visionary tool for your business.
+testimonials:
+  title: Testimonials
+  description: In the more than 10 years working I have collaborated successfully
+    with a lot of people, here are some of them.
+  items:
+  - text: His skills and work ethic are commendable and have significantly contributed
+      to our projects' success.
+    name: Jacob Kratzsch
+    role: Ceo & Founder
+  - text: Gabriel is a valuable asset to any data science team and I am confident
+      he will excel in any future endeavors.
+    name: Ayo Ayedefa
+    role: BI Head
+  - text: Gabriel is one of the most dedicated, patient and innovative people I have
+      had the pleasure of working with in any capacity.
+    name: Xialu Zheng
+    role: Junior Data Scientist
+  - text: His expertise was pivotal in building our platform from scratch, propelling
+      us ahead of schedule through his commitment and skill.
+    name: Arjun Katyal
+    role: Head of internal Audits
+  - text: He transformed our data stack, enhancing decision-making and efficiency
+      with their expertise.
+    name: Ash
+    role: Founder
+contact:
+  title: Contact
+  description: Ready to transform your data into your most powerful asset? Let's talk
+    about how we can tailor our services to your unique needs and start building your
+    data-driven future today. Reach out to discuss your vision, challenges, and how
+    I can support your journey towards insightful decision-making and strategic growth.
+    Your data has a story to tell, and together, we can make it a success story.
+  email_label: 'Email:'
+  phone_label: ''
+  telegram_label: ''
+resume:
+  title: Resume
+  description: With over ten years working in data, here is a summary of my career.
+  summary:
+    title: Summary
+    name: Gabriel Rul-lan
+    text: Senior Data Governance Architect & Operations Specialist with 13+ years
+      of experience executing complex data turnaround programs and establishing Single
+      Source of Truth commercial data governance.
+    bullets:
+    - gabriel@data-partner.xyz
+  education:
+    title: Education & Certifications
+    items:
+    - degree: Project Management Professional (PMP®)
+      year: Current
+      institution: Project Management Institute
+    - degree: Master in Business Management (MBA)
+      year: '2014'
+      institution: ESERP Business School
+    - degree: BS in Mathematics
+      year: '2013'
+      institution: University of the Balearic Islands
+  experience_freelance:
+    title: Recent Experience
+    items:
+    - role: Associate Director, R&D Data Governance & Project Lead
+      date: May 2024 - Present
+      company: AstraZeneca
+      bullets:
+      - Established global Data Domain Working Groups (DDWGs) and prioritized enterprise
+        CDEs.
+      - Aligned business leaders and engineering teams to enforce single-source-of-truth
+        data governance.
+    - role: Head of Data & Individual Contributor Architect
+      date: Sept 2023 - March 2024
+      company: Stealth Start-up (AI & SaaS)
+      bullets:
+      - Built the data roadmap from scratch, defining data ingestion patterns, semantic
+        data models, and analytical pipelines.
+      - Implemented data quality checks and algorithmic governance controls.
+    - role: Data Partner & Solutions Expert
+      date: Jan 2023 - June 2023
+      company: Mapfre
+      bullets:
+      - Built self-contained data models and analytical pipelines using BigQuery,
+        LookerML, and SQL.
+    - role: Dynamic Data Specialist & Forensic Data Auditor
+      date: April 2022 - Dec 2022
+      company: Boehringer Ingelheim
+      bullets:
+      - Rapidly audited, scrubbed, and cross-reconciled massive datasets to identify
+        compliance gaps.
+      - Designed and deployed 30+ Power BI executive dashboards.
+    - role: Data Platform Lead & Senior Data Engineer
+      date: March 2021 - April 2022
+      company: Movinga
+      bullets:
+      - Redesigned core ETL/ELT pipelines using dbt, SQL, Python, and Talend.
+      - Implemented Master Data Management principles.
+  experience_pre_freelance:
+    title: Previous Experience
+    items:
+    - role: IT Project Manager & Senior Analytics Specialist
+      date: Aug 2016 - Oct 2020
+      company: Advanced Programming Solutions SL (APSL)
+      bullets:
+      - Managed end-to-end project lifecycles, sprint planning, risk mitigation, and
+        technical deliverables (PMP).
+    - role: Business Intelligence Senior Consultant
+      date: July 2014 - Feb 2016
+      company: SDG Group Spain
+      bullets:
+      - Delivered BI, executive financial reporting, and data warehouse modeling for
+        multinational pharmaceutical clients.

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  {% assign cv = site.data[page.lang] %}
+
+  <title>{{ cv.hero.name | default: "Gabriel Rul-lan" }} - Data Partner</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ site.baseurl | default: '' }}/assets/img/favicon.png" rel="icon">
+  <link href="{{ site.baseurl | default: '' }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ site.baseurl | default: '' }}/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{ site.baseurl | default: '' }}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ site.baseurl | default: '' }}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="{{ site.baseurl | default: '' }}/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="{{ site.baseurl | default: '' }}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="{{ site.baseurl | default: '' }}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ site.baseurl | default: '' }}/assets/css/style.css" rel="stylesheet">
+
+  <meta property="og:title" content="{{ cv.hero.name }} - Data Partner" />
+  <meta property="og:description" content="Soy Gabriel Rul-lan y ésta es mi web para explicar cómo te benificiaría tenerme como tu Partner de Datos" />
+  <meta property="og:image" content="{{ site.baseurl | default: '' }}/assets/img/profile-img.jpg" />
+  <meta property="og:url" content="https://www.data-partner.xyz/" />
+</head>
+
+<body>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="{{ site.baseurl | default: '' }}/assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="{{ site.baseurl | default: '' }}/">{{ cv.hero.name }}</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://t.me/gabriel_rullan" target="_blank" class="telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://www.linkedin.com/in/gabriel-rullan/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          {% for item in cv.nav %}
+            <li><a href="#{{ item[0] }}" class="nav-link scrollto"><i class="bx {% if item[0] == 'hero' %}bx-home{% elsif item[0] == 'about' %}bx-user{% elsif item[0] == 'questions' %}bx-book-content{% elsif item[0] == 'resume' %}bx-file-blank{% elsif item[0] == 'services' %}bx-server{% elsif item[0] == 'contact' %}bx-envelope{% else %}bx-list-ul{% endif %}"></i> <span>{{ item[1] }}</span></a></li>
+          {% endfor %}
+        </ul>       
+      </nav>
+
+      <div class="nav-item dropdown language-switcher d-flex justify-content-end"> 
+        <button class="nav-link btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img class="flag-icon" width="30px" src="{{ site.baseurl | default: '' }}/assets/img/{% if page.lang == 'es' %}spanish{% elsif page.lang == 'en' %}english{% else %}catalan{% endif %}-flag.svg" alt="flag">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown">
+          <li><a class="dropdown-item" href="{{ site.baseurl | default: '' }}/ca/"><img width="30px" src="{{ site.baseurl | default: '' }}/assets/img/catalan-flag.svg" alt="Catalan flag" class="flag-icon"> Català</a></li>
+          <li><a class="dropdown-item" href="{{ site.baseurl | default: '' }}/"><img width="30px" src="{{ site.baseurl | default: '' }}/assets/img/spanish-flag.svg" alt="Spanish flag" class="flag-icon"> Español</a></li>
+          <li><a class="dropdown-item" href="{{ site.baseurl | default: '' }}/en/"><img width="30px" src="{{ site.baseurl | default: '' }}/assets/img/english-flag.svg" alt="English flag" class="flag-icon"> English</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>{{ cv.hero.name }}</h1>
+      <p>{{ cv.hero.typed_prefix }} <span class="typed" data-typed-items="{{ cv.hero.roles }}"></span> de Datos</p>
+      <a href="{{ cv.hero.meet_me_link | default: 'https://calendar.app.google/YbQTidmXT3Bg9wdY8' }}" target="_blank" class="btn btn-primary mt-4" style="background: #149ddd; border: 0; padding: 10px 24px; color: #fff; transition: 0.4s; border-radius: 50px;">
+        {{ cv.hero.meet_me_text | default: 'Conóceme / Meet me' }}
+      </a>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ cv.about.title }}</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="{{ site.baseurl | default: '' }}/assets/img/profile-img-itsme.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>{{ cv.about.subtitle }}</h3>
+            {% for p in cv.about.paragraphs %}
+              <p>{{ p }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Questions Section ======= -->
+    <section id="questions" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ cv.questions.title }}</h2>
+          {% for p in cv.questions.description %}
+            <p>{{ p }}</p>
+          {% endfor %}
+        </div>
+        <div class="row">
+          {% for item in cv.questions.items %}
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" {% if forloop.index > 1 %}data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endif %}>
+              <div class="icon"><i class="bi bi-box2-heart-fill"></i></div>
+              <h4 class="title"><a href="">{{ item.q }}</a></h4>
+              <p class="description">{{ item.a }}</p>
+            </div>
+          {% endfor %}
+        </div>
+        <a href="#services">{{ cv.questions.footer }}</a>
+      </div>
+    </section>
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ cv.skills.title }}</h2>
+          <p>{{ cv.skills.description }}</p>
+        </div>
+        <div class="row skills-content">
+          <div class="col-lg-6" data-aos="fade-up">
+            {% for item in cv.skills.items %}
+              {% if forloop.index <= 3 %}
+              <div class="progress">
+                <span class="skill">{{ item.name }} <i class="val">{{ item.val }}</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="{{ item.width }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ item.width }}%;"></div>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            {% for item in cv.skills.items %}
+              {% if forloop.index > 3 %}
+              <div class="progress">
+                <span class="skill">{{ item.name }} <i class="val">{{ item.val }}</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="{{ item.width }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ item.width }}%;"></div>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ cv.resume.title }}</h2>
+          <p>{{ cv.resume.description }}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">{{ cv.resume.summary.title }}</h3>
+            <div class="resume-item pb-0">
+              <h4>{{ cv.resume.summary.name }}</h4>
+              <p><em>{{ cv.resume.summary.text }}</em></p>
+              <ul>
+                {% for b in cv.resume.summary.bullets %}
+                  <li>{{ b }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <h3 class="resume-title">{{ cv.resume.education.title }}</h3>
+            {% for item in cv.resume.education.items %}
+              <div class="resume-item">
+                <h4>{{ item.degree }}</h4>
+                <h5>{{ item.year }}</h5>
+                <p><em>{{ item.institution }}</em></p>
+              </div>
+            {% endfor %}
+
+            <h3 class="resume-title">{{ cv.resume.experience_freelance.title }}</h3>
+            {% for item in cv.resume.experience_freelance.items %}
+              <div class="resume-item">
+                <h4>{{ item.role }}</h4>
+                <h5>{{ item.date }}</h5>
+                <p><em>{{ item.company }}</em></p>
+                <ul>
+                  {% for b in item.bullets %}
+                    <li>{{ b }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">{{ cv.resume.experience_pre_freelance.title }}</h3>
+            {% for item in cv.resume.experience_pre_freelance.items %}
+              <div class="resume-item">
+                <h4>{{ item.role }}</h4>
+                <h5>{{ item.date }}</h5>
+                <p><em>{{ item.company }}</em></p>
+                <ul>
+                  {% for b in item.bullets %}
+                    <li>{{ b }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ cv.services.title }}</h2>
+          <p>{{ cv.services.description }}</p>
+        </div>
+        <div class="row">
+          {% for item in cv.services.items %}
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" {% if forloop.index > 1 %}data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endif %}>
+              <div class="icon"><i class="{{ item.icon }}"></i></div>
+              <h4 class="title"><a href="">{{ item.title }}</a></h4>
+              <p class="description">{{ item.desc }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Testimonios Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ cv.testimonials.title }}</h2>
+          <p>{{ cv.testimonials.description }}</p>
+        </div>
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            {% for item in cv.testimonials.items %}
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" {% if forloop.index > 1 %}data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endif %}>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    {{ item.text }}
+                  </p>
+                  <h3>{{ item.name }}</h3>
+                  <h4>{{ item.role }}</h4>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ cv.contact.title }}</h2>
+          <p>{{ cv.contact.description }}</p>
+        </div>
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="email mt-5">
+                <i class="bi bi-envelope"></i>
+                <h4>{{ cv.contact.email_label }}</h4>
+                <a href="mailto:gabriel@data-partner.xyz" target="_blank">gabriel@data-partner.xyz</a>
+              </div>
+              <div class="phone mt-5">
+                <i class="bi bi-phone"></i>
+                <h4>{{ cv.contact.phone_label }}</h4>
+                <a href="tel:+34638952623" target="_blank">+34 638 95 26 23</a>
+              </div>
+              <div class="info-box mt-5">
+                <i class="bi bi-telegram"></i>
+                <h4>{{ cv.contact.telegram_label }}</h4>
+                <a href="https://t.me/gabriel_rullan" target="_blank">@gabriel_rullan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/aos/aos.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{ site.baseurl | default: '' }}/assets/js/main.js"></script>
+</body>
+</html>
