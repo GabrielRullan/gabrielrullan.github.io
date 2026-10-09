@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Rul-lan | Applied Mathematician &amp; Systems Builder</title>
+  <meta name="description" content="Applied Mathematician &amp; Systems Builder. Engineering robust data platforms, deterministic algorithms, and hardware builds from first principles. BS in Mathematics (UIB), PMP®, 13+ years architecture.">
+  <meta name="author" content="Gabriel Rul-lan">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gabriel Rul-lan | Applied Mathematician &amp; Systems Builder">
+  <meta property="og:description" content="Applied Mathematician &amp; Systems Builder. Engineering robust data platforms, deterministic algorithms, and hardware builds from first principles.">
+  <meta property="og:image" content="./img/og-preview.png">
+  <meta property="og:url" content="https://www.data-partner.xyz/vC/">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="apple-touch-icon" href="./img/favicon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Top Telemetry Status Bar -->
+  <aside class="telemetry-bar" aria-label="System Telemetry">
+    <div class="container telemetry-inner">
+      <div class="status-indicator">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>SYS_STATUS: ALL_SYSTEMS_NOMINAL</span>
+      </div>
+      <div class="telemetry-item">
+        <span>BASE:</span>
+        <span class="telemetry-val">MALLORCA_ES (UTC+1)</span>
+      </div>
+      <div class="telemetry-item">
+        <span>AVAILABILITY:</span>
+        <span class="telemetry-val">IMMEDIATE_ONBOARDING</span>
+      </div>
+      <div class="telemetry-item">
+        <span>CLOCK:</span>
+        <span id="telemetry-clock" class="telemetry-val">--:--:-- UTC</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="./" class="brand-link" aria-label="Gabriel Rul-lan Home">
+        <img src="./img/logo.svg" alt="Gabriel Rul-lan Vector Sigma Glyph" class="brand-logo-icon" width="40" height="40">
+        <div class="brand-text">
+          <span class="brand-name">Gabriel Rul-lan</span>
+          <span class="brand-title">Applied Mathematician &amp; Systems Builder</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#foundation" class="nav-link">Mathematical Foundation</a></li>
+          <li><a href="#maker-lab" class="nav-link">Maker Lab</a></li>
+          <li><a href="#benchmarks" class="nav-link">Platform Benchmarks</a></li>
+          <li><a href="#deep-dives" class="nav-link">Architecture</a></li>
+          <li><a href="#stack" class="nav-link">Stack Matrix</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Connect / Deploy</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-meta-badge">
+            <span>KERNEL // FIRST_PRINCIPLES_ENGINEERING</span>
+          </div>
+          <h1 class="hero-title">
+            Engineering robust data platforms, <span class="gradient-text">deterministic algorithms</span>, and hardware builds from first principles.
+          </h1>
+          <p class="hero-lead">
+            I am an <strong>Applied Mathematician (BS, UIB)</strong>, PMP® certified architect, and systems maker with <strong>13+ years of technical leadership</strong>. I design deterministic analytical pipelines, eliminate phantom data discrepancies, and bridge physical microcontrollers with cloud-scale data infrastructure.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://calendar.app.google/YbQTidmXT3Bg9wdY8" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Schedule Architecture Briefing
+            </a>
+            <a href="#benchmarks" class="btn btn-outline">
+              Inspect Benchmarks
+            </a>
+          </div>
+
+          <div class="hero-badges-row">
+            <span class="tech-tag tag-cyan">BS Mathematics (UIB)</span>
+            <span class="tech-tag tag-cyan">PMP® Certified</span>
+            <span class="tech-tag">dbt / SQL / BigQuery / Snowflake</span>
+            <span class="tech-tag tag-amber">Arduino &amp; C++ Firmware</span>
+            <span class="tech-tag">100% Remote / Contractor</span>
+          </div>
+        </div>
+
+        <!-- Hero Terminal Console Card -->
+        <div class="hero-terminal-col">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-controls">
+                <span class="control-dot dot-red"></span>
+                <span class="control-dot dot-yellow"></span>
+                <span class="control-dot dot-green"></span>
+              </div>
+              <span class="terminal-title">gabriel@rullan-arch:~# sysinfo</span>
+              <span style="font-size: 0.7rem; color: var(--accent-cyan);">tty0</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-avatar-row">
+                <img src="./img/profile-img.jpg" alt="Portrait of Gabriel Rul-lan" class="terminal-avatar" width="64" height="64">
+                <div class="terminal-avatar-info">
+                  <span class="avatar-name">Gabriel Rul-lan</span>
+                  <span class="avatar-sub">Mathematician • Architect • Maker</span>
+                </div>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span> cat /etc/credentials.conf
+              </div>
+              <div class="terminal-line" style="color: var(--text-secondary);">
+                &gt; ACADEMIC: BS Mathematics (Univ. Balearic Islands, 2013)<br>
+                &gt; MANAGEMENT: Master in Business Management (ESERP / UPC, 2014)<br>
+                &gt; CERTIFICATION: PMP® (PMI) | DAMA-DMBOK Practitioner<br>
+                &gt; SPECIALTY: Data Turnaround, Semantic Modeling, MDM, IoT
+              </div>
+              <div class="terminal-line" style="margin-top: 12px;">
+                <span class="terminal-prompt">$</span> check-uptime --verified
+              </div>
+              <div class="terminal-line" style="color: var(--accent-green);">
+                [OK] 13+ Years Active Enterprise &amp; Startup Architecture<br>
+                [OK] 30+ Forensic BI &amp; Auditing Dashboards Deployed<br>
+                [OK] 0 Phantom Revenue Records Tolerated
+              </div>
+              <div class="terminal-line" style="margin-top: 8px;">
+                <span class="terminal-prompt">&gt;</span> <span class="terminal-cursor"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mathematical Foundation Section -->
+    <section class="section-block" id="foundation">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Formal Theoretical Foundation</span>
+          <h2 class="section-title">Applied Mathematics Driving Deterministic Systems</h2>
+          <p class="section-desc">
+            Most data pipelines break because they lack formal mathematical constraints. I apply discrete mathematics, graph theory, and deterministic logic to ensure systems are provably correct, scalable, and audit-ready.
+          </p>
+        </header>
+
+        <div class="foundation-grid">
+          <article class="card-math">
+            <span class="card-math-icon" aria-hidden="true">∑</span>
+            <h3 class="card-math-title">Graph Theory &amp; Lineage DAGs</h3>
+            <p class="card-math-text">
+              Direct application of Directed Acyclic Graphs (DAGs) and topological sorting to construct bulletproof transformation pipelines in dbt. Eliminating circular dependencies and guaranteeing reproducible lineage from raw ingest to analytical semantic layers.
+            </p>
+            <div class="math-formula">
+              G = (V, E) &nbsp;|&nbsp; ∀ (u, v) ∈ E : order(u) &lt; order(v)
+            </div>
+          </article>
+
+          <article class="card-math">
+            <span class="card-math-icon" aria-hidden="true">∅</span>
+            <h3 class="card-math-title">Set Theory &amp; Entity Resolution</h3>
+            <p class="card-math-text">
+              Transforming chaotic multi-system records (Salesforce, Stripe, Chargebee, legacy DBs) into unified golden records through deterministic relational algebra, equivalence classes, and forensic reconciliation matrices. Zero duplicate entities.
+            </p>
+            <div class="math-formula">
+              R / ∼ &nbsp;=&nbsp; { [x] : x ∈ Entities } &nbsp;|&nbsp; Equivalence Partitioning
+            </div>
+          </article>
+
+          <article class="card-math">
+            <span class="card-math-icon" aria-hidden="true">∫</span>
+            <h3 class="card-math-title">Statistical Process Control</h3>
+            <p class="card-math-text">
+              Automated data quality assertions using distribution bounds and anomaly detection algorithms. Pipeline thresholds validate transactional integrity in real time, halting silent data corruption before reaching financial statements.
+            </p>
+            <div class="math-formula">
+              Pr(|X - μ| ≥ kσ) ≤ 1 / k² &nbsp;|&nbsp; Chebyshev Anomaly Gates
+            </div>
+          </article>
+        </div>
+
+        <aside class="academic-callout">
+          <div class="academic-info">
+            <span class="academic-badge">Academic Verification</span>
+            <h4 class="academic-title">BS in Mathematics — Universitat de les Illes Balears (UIB, 2013)</h4>
+            <p class="academic-detail">Rigorous curriculum in Abstract Algebra, Topology, Real &amp; Complex Analysis, Numerical Methods, and Probability Theory.</p>
+          </div>
+          <span class="tech-tag tag-cyan" style="font-size: 0.82rem; padding: 6px 14px;">FIRST-PRINCIPLES RIGOR</span>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Hardware & Maker Lab Section -->
+    <section class="section-block" id="maker-lab">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label label-amber">Physical Engineering &amp; Embedded Systems</span>
+          <h2 class="section-title">The Maker Lab: Microcontrollers &amp; Hardware Builds</h2>
+          <p class="section-desc">
+            A genuine systems builder understands computing from transistors and interrupts to distributed cloud warehouses. In my workshop, I engineer physical hardware, embedded microcontrollers, and venture prototypes.
+          </p>
+        </header>
+
+        <div class="hardware-showcase">
+          <!-- Hardware Card 1 -->
+          <article class="hardware-card">
+            <div class="hardware-card-header">
+              <span class="hardware-tag">HARDWARE BUILD // EMBEDDED C++</span>
+              <span class="hardware-spec-badge">ATmega328P / GSM</span>
+            </div>
+            <div class="hardware-card-body">
+              <h3 class="hardware-title">DIY Cellular Rotary Dial Telephone</h3>
+              <p class="hardware-desc">
+                Engineered a standalone, portable cellular telephone housed inside an authentic vintage rotary telephone casing. Integrated pulse-dial mechanical decoding with modern GSM cellular transceiver hardware.
+              </p>
+              <ul class="hardware-specs-list">
+                <li><span>Custom hardware debounce circuit &amp; optical pulse counter for the mechanical rotary governor.</span></li>
+                <li><span>Interrupt-driven C++ state machine on Arduino for precise millisecond pulse-train parsing.</span></li>
+                <li><span>SIM800L GSM cellular modem integration with automated Hayes AT-command protocol pipeline.</span></li>
+                <li><span>Standalone Li-ion power subsystem with boost converter &amp; charge protection circuitry.</span></li>
+              </ul>
+              <pre class="hardware-code-snippet"><code>void IRAM_ATTR onDialPulse() {
+  unsigned long now = millis();
+  if (now - lastPulseTime &gt; DEBOUNCE_MS) {
+    pulseCount++;
+    lastPulseTime = now;
+  }
+}</code></pre>
+            </div>
+          </article>
+
+          <!-- Hardware Card 2 -->
+          <article class="hardware-card">
+            <div class="hardware-card-body" style="padding-top: 20px;">
+              <div class="hardware-card-header" style="margin: -20px -20px 20px -20px;">
+                <span class="hardware-tag">PROTOTYPING &amp; FABRICATION</span>
+                <span class="hardware-spec-badge">IoT / Custom Firmware</span>
+              </div>
+              <h3 class="hardware-title">Venture Prototypes &amp; Sensor Telemetry Nodes</h3>
+              <p class="hardware-desc">
+                From schematic design in EDA tools to functional rapid prototypes, I build connected sensor devices and automated validation test rigs for custom venture initiatives.
+              </p>
+              <ul class="hardware-specs-list">
+                <li><span>Low-power telemetry nodes utilizing ESP32 and STM32 microcontrollers with deep-sleep cycling.</span></li>
+                <li><span>Hardware bus integration: I2C, SPI, UART, and deterministic MODBUS/CAN industrial interfaces.</span></li>
+                <li><span>Rapid mechanical prototyping via precision 3D CAD modeling and additive fabrication.</span></li>
+                <li><span>Edge-to-cloud telemetry: lightweight MQTT brokers streaming to cloud analytical warehouses.</span></li>
+              </ul>
+              <pre class="hardware-code-snippet"><code>// Telemetry packet serialization &amp; CRC16 integrity check
+struct __attribute__((packed)) TelemetryFrame {
+  uint32_t timestamp;
+  int16_t  sensorPayload[4];
+  uint16_t crc16;
+};</code></pre>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Platform Builds & Benchmarks -->
+    <section class="section-block" id="benchmarks">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Enterprise Architecture &amp; Data Turnaround</span>
+          <h2 class="section-title">Technical Platform Builds &amp; Empirical Benchmarks</h2>
+          <p class="section-desc">
+            Explore verified architectural implementations across international enterprises, PE-backed turnarounds, and complex pharmaceutical R&amp;D ecosystems.
+          </p>
+        </header>
+
+        <div class="benchmarks-console">
+          <!-- Console Tab Bar -->
+          <div class="console-tab-bar" role="tablist" aria-label="Enterprise Benchmarks">
+            <button class="console-tab active" role="tab" aria-selected="true" data-target="tab-movinga" id="tab-btn-movinga">
+              <span class="tab-glyph">◆</span> 01_MOVINGA_CORE_REFACTOR
+            </button>
+            <button class="console-tab" role="tab" aria-selected="false" data-target="tab-astrazeneca" id="tab-btn-astrazeneca" tabindex="-1">
+              <span class="tab-glyph">◆</span> 02_ASTRAZENECA_R&amp;D_GRAPH
+            </button>
+            <button class="console-tab" role="tab" aria-selected="false" data-target="tab-mapfre" id="tab-btn-mapfre" tabindex="-1">
+              <span class="tab-glyph">◆</span> 03_MAPFRE_AUTONOMOUS_ENGINE
+            </button>
+            <button class="console-tab" role="tab" aria-selected="false" data-target="tab-boehringer" id="tab-btn-boehringer" tabindex="-1">
+              <span class="tab-glyph">◆</span> 04_BOEHRINGER_FORENSIC_AUDIT
+            </button>
+          </div>
+
+          <!-- Console Content Container -->
+          <div class="console-content-container">
+            <!-- Pane 1: Movinga -->
+            <div class="benchmark-tab-pane active" id="tab-movinga" role="tabpanel" aria-labelledby="tab-btn-movinga">
+              <div class="benchmark-layout">
+                <div class="benchmark-info-pane">
+                  <div class="benchmark-org-badge">
+                    <span>Movinga (Berlin / Remote) • Data Platform Lead</span>
+                  </div>
+                  <h3>Full Platform Refactoring &amp; Single Source of Truth</h3>
+                  <p class="benchmark-narrative">
+                    Inherited a fragmented analytics platform with conflicting commercial metrics across Salesforce, Stripe, and legacy DBs. Led complete refactoring of ETL/ELT pipelines using dbt, SQL, Python, and Talend. Established Master Data Management (MDM) client golden records, harmonizing ARR, NRR, and Churn definitions into an audit-ready single source of truth.
+                  </p>
+                  <div class="benchmark-metric-grid">
+                    <div class="metric-stat-box">
+                      <div class="metric-val">100%</div>
+                      <div class="metric-label">Cross-Platform KPI Reconciliation</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">0</div>
+                      <div class="metric-label">Phantom Revenue Records</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">dbt + SQL</div>
+                      <div class="metric-label">Semantic Architecture Stack</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">MDM</div>
+                      <div class="metric-label">Master Data Deduplication</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="benchmark-code-pane">
+                  <div class="code-pane-header">
+                    <span>models/marts/commercial/fct_mrr_reconciled.sql</span>
+                    <span>dbt core v1.6</span>
+                  </div>
+                  <pre class="code-pane-body"><code>-- Verified dbt semantic aggregation model
+with staged_billing as (
+    select * from {{ ref('stg_stripe_invoices') }}
+),
+staged_crm as (
+    select * from {{ ref('stg_salesforce_contracts') }}
+),
+reconciled as (
+    select
+        c.client_golden_id,
+        c.contract_id,
+        b.invoice_amount_eur,
+        coalesce(b.recognized_arr, c.expected_arr) as audit_arr,
+        case 
+          when b.invoice_id is null then 'PHANTOM_CONTRACT_FLAG'
+          else 'VERIFIED_ACTIVE'
+        end as integrity_status
+    from staged_crm c
+    full outer join staged_billing b 
+      on c.contract_id = b.contract_id
+)
+select * from reconciled;</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 2: AstraZeneca -->
+            <div class="benchmark-tab-pane" id="tab-astrazeneca" role="tabpanel" aria-labelledby="tab-btn-astrazeneca">
+              <div class="benchmark-layout">
+                <div class="benchmark-info-pane">
+                  <div class="benchmark-org-badge badge-amber">
+                    <span>AstraZeneca • Associate Director, R&amp;D Governance</span>
+                  </div>
+                  <h3>Enterprise R&amp;D Governance &amp; Metadata Graph</h3>
+                  <p class="benchmark-narrative">
+                    Directing global enterprise data governance maturity across pharmaceutical research domains. Launched global Data Domain Working Groups (DDWGs), formalizing decision rights and operating models. Identified and standardized enterprise Critical Data Elements (CDEs) to power cloud data lake cataloging and regulatory compliance.
+                  </p>
+                  <div class="benchmark-metric-grid">
+                    <div class="metric-stat-box">
+                      <div class="metric-val amber">Enterprise</div>
+                      <div class="metric-label">Global R&amp;D Data Domains</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">DAMA-DMBOK</div>
+                      <div class="metric-label">Governance Operating Model</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val amber">CDEs</div>
+                      <div class="metric-label">Standardized Data Dictionaries</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">AWS / Cloud</div>
+                      <div class="metric-label">Datalake Metadata Interop</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="benchmark-code-pane">
+                  <div class="code-pane-header">
+                    <span>governance/cde_dictionary_schema.json</span>
+                    <span>Metadata Standard</span>
+                  </div>
+                  <pre class="code-pane-body"><code>{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "domain": "Biometrics_Clinical_RD",
+  "critical_data_element": {
+    "cde_id": "CDE-BIO-0982",
+    "business_term": "Subject_Cohort_Endpoint_Observation",
+    "classification": "REGULATED_GXP",
+    "governance_body": "DDWG_Clinical_Interoperability",
+    "dq_rules": [
+      "COMPLETENESS >= 99.99%",
+      "TIMELINESS_SLA < 120min",
+      "REFERENTIAL_INTEGRITY_CHECK_OK"
+    ]
+  }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 3: Mapfre -->
+            <div class="benchmark-tab-pane" id="tab-mapfre" role="tabpanel" aria-labelledby="tab-btn-mapfre">
+              <div class="benchmark-layout">
+                <div class="benchmark-info-pane">
+                  <div class="benchmark-org-badge">
+                    <span>Mapfre • Solutions Expert &amp; Data Partner</span>
+                  </div>
+                  <h3>Autonomous Analytics Engine &amp; LookerML Semantic Layer</h3>
+                  <p class="benchmark-narrative">
+                    Intervened as an independent contractor to solve complex operational data bottlenecks. Engineered self-contained data models and automated transformation pipelines in BigQuery and LookerML, delivering interactive executive dashboards without burdening overburdened central IT teams.
+                  </p>
+                  <div class="benchmark-metric-grid">
+                    <div class="metric-stat-box">
+                      <div class="metric-val">100%</div>
+                      <div class="metric-label">Autonomous Solo Delivery</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">BigQuery</div>
+                      <div class="metric-label">High-Performance Warehouse</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">LookerML</div>
+                      <div class="metric-label">Governed Semantic Layer</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">PMP®</div>
+                      <div class="metric-label">On-Time Execution</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="benchmark-code-pane">
+                  <div class="code-pane-header">
+                    <span>views/claims_operational_metrics.view.lkml</span>
+                    <span>LookerML Modeling</span>
+                  </div>
+                  <pre class="code-pane-body"><code>view: claims_operational_metrics {
+  derived_table: {
+    sql: 
+      SELECT 
+        claim_id,
+        policy_holder_id,
+        settlement_timestamp,
+        DATE_DIFF(CURRENT_DATE(), settlement_date, DAY) AS days_to_resolution,
+        loss_ratio_index
+      FROM `mapfre_dw.claims_cleansed_partitioned`
+      WHERE _PARTITIONDATE >= DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY)
+    ;;
+  }
+  
+  measure: total_settlement_sum {
+    type: sum
+    sql: ${TABLE}.settlement_amount ;;
+    value_format_name: eur
+  }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 4: Boehringer Ingelheim -->
+            <div class="benchmark-tab-pane" id="tab-boehringer" role="tabpanel" aria-labelledby="tab-btn-boehringer">
+              <div class="benchmark-layout">
+                <div class="benchmark-info-pane">
+                  <div class="benchmark-org-badge badge-amber">
+                    <span>Boehringer Ingelheim • Forensic Data Auditor</span>
+                  </div>
+                  <h3>Forensic Data Auditing &amp; Anomaly Detection Engines</h3>
+                  <p class="benchmark-narrative">
+                    Proactively discovered compliance risks in manual corporate auditing exports. Designed and deployed automated data reconciliation pipelines using Python, SQL, and Power BI. Delivered 30+ executive dashboards alerting leadership to financial and compliance anomalies across large-scale corporate datasets.
+                  </p>
+                  <div class="benchmark-metric-grid">
+                    <div class="metric-stat-box">
+                      <div class="metric-val amber">30+</div>
+                      <div class="metric-label">Executive Dashboards Deployed</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">Forensic</div>
+                      <div class="metric-label">Automated Anomaly Detection</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val amber">Real-Time</div>
+                      <div class="metric-label">Continuous Compliance Alerting</div>
+                    </div>
+                    <div class="metric-stat-box">
+                      <div class="metric-val">Power BI</div>
+                      <div class="metric-label">C-Suite Internal Audit Visibility</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="benchmark-code-pane">
+                  <div class="code-pane-header">
+                    <span>audit_engine/reconciliation_validator.py</span>
+                    <span>Python 3.10 / Forensic Engine</span>
+                  </div>
+                  <pre class="code-pane-body"><code>def audit_transaction_stream(df_records, tolerance_eur=0.01):
+    """
+    Forensic reconciliation between billing ledger
+    and statutory ERP journal entries.
+    """
+    discrepancies = df_records[
+        (df_records['erp_ledger_amt'] - df_records['billing_amt']).abs() > tolerance_eur
+    ]
+    if not discrepancies.empty:
+        log_compliance_alert(
+            count=len(discrepancies),
+            total_delta=discrepancies['delta'].sum(),
+            severity='HIGH_RISK_AUDIT_TRIGGER'
+        )
+    return discrepancies</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Deep Dives Section -->
+    <section class="section-block" id="deep-dives">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Code-Level Rigor</span>
+          <h2 class="section-title">Architectural Patterns &amp; First-Principles Code</h2>
+          <p class="section-desc">
+            Reliability is built line by line. Here are three representative architectural patterns from my engineering playbook.
+          </p>
+        </header>
+
+        <div class="deep-dives-grid">
+          <article class="dive-card">
+            <span class="dive-category">DATA ARCHITECTURE // DBT</span>
+            <h3 class="dive-title">Deterministic Incremental Processing</h3>
+            <p class="dive-text">
+              Ensures idempotency in high-throughput warehouse updates by leveraging deterministic surrogate keys and rolling lookback watermarks. Prevents duplicate state updates.
+            </p>
+            <pre class="dive-snippet-preview"><code>{{ config(
+    materialized = 'incremental',
+    unique_key = 'entity_surrogate_key'
+) }}
+select
+    md5(concat(system_id, '|', updated_at)) as entity_surrogate_key,
+    payload_val
+from {{ source('raw', 'events') }}
+{% if is_incremental() %}
+    where updated_at &gt; (select max(updated_at) - interval '3 hours' from {{ this }})
+{% endif %}</code></pre>
+          </article>
+
+          <article class="dive-card">
+            <span class="dive-category">DATA GOVERNANCE // SQL</span>
+            <h3 class="dive-title">Entity Resolution Window Partitioning</h3>
+            <p class="dive-text">
+              Deduplicates cross-system entity graphs using ranking functions, source hierarchy priorities, and null-coalescing golden record aggregation.
+            </p>
+            <pre class="dive-snippet-preview"><code>with ranked_records as (
+  select
+    tax_id,
+    company_name,
+    row_number() over (
+      partition by tax_id
+      order by source_trust_weight desc, updated_at desc
+    ) as priority_rank
+  from unified_entities_raw
+)
+select * from ranked_records where priority_rank = 1;</code></pre>
+          </article>
+
+          <article class="dive-card">
+            <span class="dive-category">EMBEDDED // C++</span>
+            <h3 class="dive-title">Interrupt Service Routine State Machine</h3>
+            <p class="dive-text">
+              Low-jitter pulse width decoding on microcontroller hardware using non-blocking timers and atomic hardware flags for real-time sensor processing.
+            </p>
+            <pre class="dive-snippet-preview"><code>volatile uint8_t pulse_counter = 0;
+volatile bool dial_in_motion = false;
+
+void IRAM_ATTR isr_rotary_motion() {
+  dial_in_motion = digitalRead(PIN_GOVERNOR);
+  if (!dial_in_motion) {
+    publish_digit_event(pulse_counter);
+    pulse_counter = 0;
+  }
+}</code></pre>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Stack Matrix -->
+    <section class="section-block" id="stack">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Competency Inventory</span>
+          <h2 class="section-title">The Complete Systems Stack</h2>
+          <p class="section-desc">
+            A comprehensive matrix of technologies, frameworks, and methodologies deployed across 13+ years of production engineering.
+          </p>
+        </header>
+
+        <div class="stack-matrix-grid">
+          <div class="stack-column">
+            <h3 class="stack-column-header">
+              <span>Data Warehousing</span>
+              <span class="tech-tag tag-cyan">Cloud</span>
+            </h3>
+            <ul class="stack-items-list">
+              <li class="stack-item"><span>dbt (Core / Cloud)</span><span class="stack-item-badge">Expert</span></li>
+              <li class="stack-item"><span>Snowflake</span><span class="stack-item-badge">Enterprise</span></li>
+              <li class="stack-item"><span>Google BigQuery</span><span class="stack-item-badge">Production</span></li>
+              <li class="stack-item"><span>PostgreSQL / MySQL</span><span class="stack-item-badge">Relational</span></li>
+              <li class="stack-item"><span>Talend MDM</span><span class="stack-item-badge">Pipelines</span></li>
+            </ul>
+          </div>
+
+          <div class="stack-column">
+            <h3 class="stack-column-header">
+              <span>Languages &amp; Core</span>
+              <span class="tech-tag tag-cyan">Code</span>
+            </h3>
+            <ul class="stack-items-list">
+              <li class="stack-item"><span>SQL (Advanced / Tuning)</span><span class="stack-item-badge">13+ Years</span></li>
+              <li class="stack-item"><span>Python (ETL / Pandas)</span><span class="stack-item-badge">Expert</span></li>
+              <li class="stack-item"><span>C / C++ (Embedded)</span><span class="stack-item-badge">Hardware</span></li>
+              <li class="stack-item"><span>Bash / Unix CLI</span><span class="stack-item-badge">Scripting</span></li>
+              <li class="stack-item"><span>Git &amp; CI/CD Pipelines</span><span class="stack-item-badge">Automation</span></li>
+            </ul>
+          </div>
+
+          <div class="stack-column">
+            <h3 class="stack-column-header">
+              <span>Data Governance</span>
+              <span class="tech-tag tag-amber">Strategy</span>
+            </h3>
+            <ul class="stack-items-list">
+              <li class="stack-item"><span>DAMA-DMBOK Body</span><span class="stack-item-badge">Practitioner</span></li>
+              <li class="stack-item"><span>Master Data (MDM)</span><span class="stack-item-badge">Golden Rec</span></li>
+              <li class="stack-item"><span>Critical Data Elements</span><span class="stack-item-badge">CDEs</span></li>
+              <li class="stack-item"><span>Data Catalogs &amp; Lineage</span><span class="stack-item-badge">Metadata</span></li>
+              <li class="stack-item"><span>LookerML / Semantic</span><span class="stack-item-badge">SSOT</span></li>
+            </ul>
+          </div>
+
+          <div class="stack-column">
+            <h3 class="stack-column-header">
+              <span>Hardware &amp; Delivery</span>
+              <span class="tech-tag tag-amber">Physical</span>
+            </h3>
+            <ul class="stack-items-list">
+              <li class="stack-item"><span>Arduino / ATmega</span><span class="stack-item-badge">Microcontroller</span></li>
+              <li class="stack-item"><span>ESP32 / IoT Radios</span><span class="stack-item-badge">Sensors</span></li>
+              <li class="stack-item"><span>PMP® (PMI Certified)</span><span class="stack-item-badge">Governance</span></li>
+              <li class="stack-item"><span>Agile / Scrum / Hybrid</span><span class="stack-item-badge">Delivery</span></li>
+              <li class="stack-item"><span>CAD &amp; Rapid Prototype</span><span class="stack-item-badge">Fabrication</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Collaborative Build Terminal Section -->
+    <section class="section-block" id="contact">
+      <div class="container">
+        <div class="contact-terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="control-dot dot-red"></span>
+              <span class="control-dot dot-yellow"></span>
+              <span class="control-dot dot-green"></span>
+            </div>
+            <span class="terminal-title">CONNECT_CLIENT // TCP_PORT_SECURE</span>
+            <span style="font-size: 0.72rem; color: var(--accent-green);">LISTENING</span>
+          </div>
+          <div class="contact-terminal-body">
+            <div class="contact-prompt-area">
+              <h2>Let's Engineer Your Next Data Platform or Hardware System</h2>
+              <p class="contact-lead-text">
+                Whether you need to resolve chaotic multi-system revenue data, build an enterprise data governance framework, or design an end-to-end analytical architecture, I bring mathematical rigor and solo contractor autonomy to your engineering mandate.
+              </p>
+
+              <div class="contact-direct-links">
+                <div class="contact-link-row">
+                  <span class="contact-icon-tag">@</span>
+                  <span>Direct Email: <a href="mailto:gabriel@data-partner.xyz">gabriel@data-partner.xyz</a></span>
+                </div>
+                <div class="contact-link-row">
+                  <span class="contact-icon-tag">#</span>
+                  <span>Telephone: <a href="tel:+34638952623">+34 638 95 26 23</a></span>
+                </div>
+                <div class="contact-link-row">
+                  <span class="contact-icon-tag">📍</span>
+                  <span>Base: Mallorca, Spain (100% Remote / Global Contractor)</span>
+                </div>
+                <div class="contact-link-row">
+                  <span class="contact-icon-tag">⚡</span>
+                  <span>Availability: Immediate Engagement / Contractor Agreement</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-action-box">
+              <h3 class="booking-title">Schedule a Technical Call</h3>
+              <p class="booking-desc">
+                Select an open slot directly on Google Calendar for an initial architectural review and scope assessment.
+              </p>
+              <a href="https://calendar.app.google/YbQTidmXT3Bg9wdY8" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="width: 100%;">
+                Open Booking Calendar
+              </a>
+              <div class="terminal-copy-cmd" data-copy="gabriel@data-partner.xyz" title="Click to copy email address">
+                <span>$ copy email: gabriel@data-partner.xyz</span>
+                <span>[COPY]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>&copy; 2026 Gabriel Rul-lan. Version C: Applied Mathematician &amp; Systems Builder.</p>
+        <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">
+          Built from first principles. No tracker cookies, no third-party telemetry, 100% deterministic static HTML.
+        </p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#hero">Back to Top ↑</a></li>
+        <li><a href="#foundation">Math</a></li>
+        <li><a href="#maker-lab">Maker Lab</a></li>
+        <li><a href="#benchmarks">Benchmarks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

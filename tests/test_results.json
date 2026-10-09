@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-10-09T18:09:44Z",
+  "total_suites": 4,
+  "total_tests": 27,
+  "total_passed": 27,
+  "total_failed": 0,
+  "total_errors": 0,
+  "suites": [
+    {
+      "name": "Fact Integrity (CV_gen & Prohibition of Day Rate)",
+      "test_class": "TestFactIntegrity",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "duration_seconds": 0.25,
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "5-Dimension Pairwise Distinctness Rubric",
+      "test_class": "TestPairwiseDistinctness",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "errors": 0,
+      "duration_seconds": 0.16,
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "HTML Standards, SEO, Accessibility, Links & Budget",
+      "test_class": "TestHtmlStandards",
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "errors": 0,
+      "duration_seconds": 0.26,
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Headless Chrome Responsive, Overflow & Runtime Audit",
+      "test_class": "TestHeadlessResponsive",
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "errors": 0,
+      "duration_seconds": 16.12,
+      "status": "PASS",
+      "issues": []
+    }
+  ],
+  "duration_seconds": 16.79,
+  "status": "PASSED"
+}

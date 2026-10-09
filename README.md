@@ -1,28 +1,27 @@
-# Gabriel Rul-lan CV Portfolio
+﻿# Gabriel Rul-lan - CV project
 
-This repository hosts my Data Partner CV and portfolio. It is automatically published to [data-partner.xyz](https://www.data-partner.xyz) using GitHub Pages.
+| Part | Folder | Purpose |
+| :--- | :--- | :--- |
+| **Front** | [`web/`](web/) | Public Jekyll site published at [data-partner.xyz](https://www.data-partner.xyz) (ES/EN/CA portfolio). See [`web/README.md`](web/README.md). |
+| **Back** | [`CV_gen/`](CV_gen/) | Private CV generation workspace: master CVs, job-offer tailoring, STAR Q&A bank, history, PDF exports and the build script. See [`CV_gen/README.md`](CV_gen/README.md). |
 
-## How to Maintain and Update the CV
+The two parts are independent: only `web/` is deployed (via `.github/workflows/pages.yml`), so nothing in `CV_gen/` (job offers, phone, Q&A, PDFs) is ever published.
 
-The site has been refactored to use Jekyll (natively supported by GitHub Pages). You no longer need to edit HTML directly to update your CV!
+## Web (front)
 
-### Updating Content
+```bash
+cd web
+bundle exec jekyll serve   # local preview
+```
+Content lives in `web/_data/{es,en,ca}.yml`; layout in `web/_layouts/default.html`.
 
-All the textual content, including your resume experience, skills, and translations, is stored in YAML data files in the `_data/` folder:
+> **GitHub Pages setting:** *Settings -> Pages -> Source* must be set to **GitHub Actions** (the site is no longer at the repo root).
 
-- `_data/es.yml` (Spanish - Main)
-- `_data/en.yml` (English)
-- `_data/ca.yml` (Catalan)
+## CV generator (back)
 
-To add a new job or update a skill:
-1. Open the corresponding `.yml` file in the `_data/` folder.
-2. Find the `resume` or `skills` section.
-3. Edit the text or add a new block using the same YAML syntax.
-4. Commit your changes to the `main` branch. GitHub Actions will automatically rebuild the site.
-
-### Updating the Layout
-
-If you want to change the HTML structure, colors, or CSS classes, edit the single layout file:
-- `_layouts/default.html`
-
-This layout is automatically applied to `index.html`, `en/index.html`, and `ca/index.html`.
+```bash
+python CV_gen/build.py                 # master CVs -> CV_gen/build/*.html (images embedded)
+python CV_gen/build.py --pdf           # also export PDFs (needs Edge or Chrome)
+python CV_gen/build.py "CV_gen/job offers/<file>.md" --pdf --out CV_gen/02_PDFs_Exportados
+```
+Standard library only; plain-markdown CVs additionally need `pip install markdown`. Conventions and AI-assistant rules (CSS preservation, no work-modality in CVs, location fixed) are in `CV_gen/README.md`.

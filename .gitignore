@@ -2,3 +2,9 @@
 /ignore/abc.css
 /ignore/abc.html
 ignore/index copy.html
+
+# Private CV workspace (own private repo)
+CV_gen/
+__pycache__/
+.agents/
+
