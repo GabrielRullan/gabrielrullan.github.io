@@ -1,5 +1,5 @@
 """
-tests/run_all_tests.py - Master test runner coordinating all test suites for vA and vB.
+tests/run_all_tests.py - Master test runner coordinating all test suites for vA, vB, and vD.
 
 Executes:
 1. tests/test_facts.py

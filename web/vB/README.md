@@ -1,9 +1,9 @@
 # Version B: Approachable Fractional Data Partner
 
 ## 1. Positioning & Value Proposition
-**Version B** positions Gabriel Rul-lan as an **Approachable Fractional Data Partner and On-Demand Chief Data Officer & Data Lead** targeted at high-growth SMEs, venture-backed startups (Seed to Series B), and mid-market scaleups (€1M–€30M ARR).
+**Version B** positions Gabriel Rul-lan as an **Approachable Fractional Data Partner and On-Demand Chief Data Officer & Data Lead** targeted at high-growth SMEs, venture-backed startups (Seed to Series B), and mid-market scaleups.
 
-Unlike enterprise governance advisory firms that deliver heavy theoretical slide decks, or pure individual contractor engineers who lack commercial perspective, Version B positions Gabriel as an **embedded, collaborative partner**. He combines strategic C-suite data vision with hands-on pipeline engineering, delivering rapid commercial clarity without the €200k+ overhead and equity dilution of a full-time executive hire.
+Unlike enterprise governance advisory firms that deliver heavy theoretical slide decks, or pure individual contractor engineers who lack commercial perspective, Version B positions Gabriel as an **embedded, collaborative partner**. He combines strategic C-suite data vision with hands-on pipeline engineering, delivering rapid commercial clarity without the overhead and equity dilution of a full-time executive hire.
 
 ### Core Value Pillars:
 - **Problem-Agitation-Solution Focus:** Directly addressing executive pain points—conflicting metrics in board meetings, fragile spreadsheet daisy-chains, and key-person risk.
@@ -14,7 +14,7 @@ Unlike enterprise governance advisory firms that deliver heavy theoretical slide
 ---
 
 ## 2. Target Audience
-1. **Founders, CEOs & Managing Directors:** Leading high-growth companies who need reliable numbers for fundraising and operational scaling but cannot justify a full-time €200k+ CDO salary.
+1. **Founders, CEOs & Managing Directors:** Leading high-growth companies who need reliable numbers for fundraising and operational scaling without full-time executive overhead.
 2. **CTOs & VP of Engineering:** Overburdened technical leaders seeking an experienced data partner to architect and deliver modern analytics without pulling backend engineers away from core product roadmaps.
 3. **CFOs & Heads of Operations:** Leaders struggling with conflicting department reports, manual weekly reconciliation, and spreadsheet fragility who need automated, defensible financial and operational metrics.
 
@@ -46,8 +46,6 @@ All content is strictly factual and drawn from verified career records in `CV_ge
   - *Data Strategy & Audit Sprint:* 2-week intensive diagnostic and roadmap.
   - *Fractional CDO & Data Lead:* Retained monthly embedded partnership (Featured tier).
   - *Data Governance & Quality Audit:* Targeted sprint for data cleaning, MDM, and compliance.
-- **Interactive Cost Comparison Calculator:**
-  - Dynamic selector for Seed, Growth, and Scaleup stages showing €110k–€200k+ annual savings versus full-time executive hires.
 - **Real Client Case Studies:**
   - *Movinga:* Data platform turnaround, elimination of recurring pipeline failures, and Master Data Management (MDM).
   - *Stealth AI SaaS:* 0-to-1 data roadmap, automated ingestion, and semantic models.
@@ -63,7 +61,7 @@ All content is strictly factual and drawn from verified career records in `CV_ge
   - Executive MBA – ESERP Business School / UPC (2014).
   - Project Management Professional (PMP®) – PMI.
   - DAMA-DMBOK Practitioner (Enterprise Data Governance & MDM).
-  - Based in Mallorca, Spain (Remote-First worldwide).
+  - Global Fractional & Strategic Data Partnerships.
 - **Frictionless Booking & Contact:**
   - Direct Booking Link: `https://calendar.app.google/YbQTidmXT3Bg9wdY8`
   - Direct Email: `gabriel@data-partner.xyz`
@@ -79,5 +77,4 @@ All content is strictly factual and drawn from verified career records in `CV_ge
   - Accessible mobile hamburger navigation menu with ARIA state toggles.
   - Smooth-scrolling anchor links with keyboard focus management.
   - Interactive multi-item FAQ accordion with ARIA expansion tracking.
-  - Dynamic stage-based savings and timeline calculator.
 - **SEO & Social Metadata:** Exactly one `<h1>`, unique `<title>`, `<meta name="description">`, Open Graph tags (`og:title`, `og:description`, `og:image`, `og:url`), and semantic landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).

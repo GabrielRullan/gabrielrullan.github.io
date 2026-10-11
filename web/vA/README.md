@@ -49,7 +49,7 @@ All content is strictly factual and backed by verified records from `CV_gen`:
   - Executive MBA – ESERP Business School / UPC (2014).
   - Project Management Professional (PMP®) – Project Management Institute (PMI).
   - DAMA-DMBOK Framework Practitioner.
-  - Based in Mallorca, Spain (100% Remote-First; flexible for on-site executive milestones).
+  - Enterprise & Global Strategic Engagement.
 - **Executive Contact & Call to Action:**
   - Direct Booking Calendar: `https://calendar.app.google/YbQTidmXT3Bg9wdY8`
   - Executive Email: `gabriel@data-partner.xyz`

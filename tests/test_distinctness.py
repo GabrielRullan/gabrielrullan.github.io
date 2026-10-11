@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 
-VERSIONS = ["vA", "vB"]
+VERSIONS = ["vA", "vB", "vD"]
 
 
 def load_file_safe(version: str, rel_path: str) -> str:
@@ -229,6 +229,24 @@ class TestPairwiseDistinctness(unittest.TestCase):
             f"vA vs vB failed distinctness threshold! Total: {result['total']}/5. Breakdown: {result['scores']}"
         )
         self.assertGreaterEqual(result["total"], 4, "vA vs vB distinctness must be >= 4")
+
+    def test_pairwise_vA_vs_vD(self):
+        """vA (Enterprise Authority) vs vD (Authoritative Hybrid) must differ in >= 4/5 dimensions."""
+        result = self._evaluate_pair("vA", "vD")
+        self.assertTrue(
+            result["passed"],
+            f"vA vs vD failed distinctness threshold! Total: {result['total']}/5. Breakdown: {result['scores']}"
+        )
+        self.assertGreaterEqual(result["total"], 4, "vA vs vD distinctness must be >= 4")
+
+    def test_pairwise_vB_vs_vD(self):
+        """vB (Fractional Partner) vs vD (Authoritative Hybrid) must differ in >= 4/5 dimensions."""
+        result = self._evaluate_pair("vB", "vD")
+        self.assertTrue(
+            result["passed"],
+            f"vB vs vD failed distinctness threshold! Total: {result['total']}/5. Breakdown: {result['scores']}"
+        )
+        self.assertGreaterEqual(result["total"], 4, "vB vs vD distinctness must be >= 4")
 
 
 if __name__ == "__main__":

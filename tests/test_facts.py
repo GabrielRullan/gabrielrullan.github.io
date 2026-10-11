@@ -19,11 +19,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 CV_GEN_DIR = REPO_ROOT / "CV_gen"
 
-VERSIONS = ["vA", "vB"]
+VERSIONS = ["vA", "vB", "vD"]
 
 EXPECTED_BOOKING_URL = "https://calendar.app.google/YbQTidmXT3Bg9wdY8"
 EXPECTED_EMAIL = "gabriel@data-partner.xyz"
-EXPECTED_LOCATION_KEYWORDS = ["mallorca", "spain", "remote"]
 
 DAY_RATE_PATTERNS = [
     re.compile(r"\b\d+\s*€\s*/\s*(day|día|dia|tag)\b", re.IGNORECASE),
@@ -34,6 +33,8 @@ DAY_RATE_PATTERNS = [
     re.compile(r"\b\d+\s*eur\s*/\s*day\b", re.IGNORECASE),
     re.compile(r"\b(target_rate|rate)\s*[:=]\s*[\"']?\d+\s*€", re.IGNORECASE),
     re.compile(r"\b450\s*€\b", re.IGNORECASE),
+    re.compile(r"€\s*\d+", re.IGNORECASE),
+    re.compile(r"\b\d+\s*€", re.IGNORECASE),
 ]
 
 
@@ -94,18 +95,17 @@ class TestFactIntegrity(unittest.TestCase):
             )
 
     def test_location_mentions(self):
-        """Verify Mallorca / Spain / Remote-first location is correctly stated."""
+        """Per explicit user directive (2026-10-11), location/remote mentions are removed across all versions."""
+        prohibited_terms = ["mallorca", "remote-first", "100% remote", "island base", "barcelona on-site"]
         for v in VERSIONS:
             html = get_version_html(v)
             self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
             text = extract_visible_text(html).lower()
-            has_mallorca = "mallorca" in text
-            has_spain = "spain" in text or "españa" in text
-            has_remote = "remote" in text
-            self.assertTrue(
-                has_mallorca or (has_spain and has_remote),
-                f"Version {v} does not mention location (Mallorca / Spain / Remote)"
-            )
+            for term in prohibited_terms:
+                self.assertNotIn(
+                    term, text,
+                    f"Version {v} must not mention location/remote per user directive (found: '{term}')"
+                )
 
     def test_no_day_rate_displayed(self):
         """CRITICAL: Strict requirement that NO day rate is present on any version."""
@@ -160,7 +160,10 @@ class TestFactIntegrity(unittest.TestCase):
         hallucination_indicators = [
             "google lead", "amazon director", "meta cdo", "mckinsey partner",
             "microsoft vp", "apple architect", "harvard phd", "stanford mba",
-            "20+ years", "30+ years", "100m revenue", "$100m"
+            "20+ years", "30+ years", "100m revenue", "$100m",
+            # User Directive Prohibitions:
+            "99.8%", "5 eu countries", "5 países de la ue", "multi-million", "multimillonari",
+            "pmi-id", "pmi id", "pmi #"
         ]
         for v in VERSIONS:
             html = get_version_html(v)

@@ -29,7 +29,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 SCREENSHOTS_DIR = REPO_ROOT / "tests" / "screenshots"
 
-VERSIONS = ["vA", "vB"]
+VERSIONS = ["vA", "vB", "vD"]
 VIEWPORTS = [
     {"name": "mobile", "width": 375, "height": 812, "mobile": True},
     {"name": "tablet", "width": 768, "height": 1024, "mobile": False},
@@ -323,6 +323,16 @@ class TestHeadlessResponsive(unittest.TestCase):
 
     def test_vB_desktop_1440(self):
         self._test_version_viewport("vB", VIEWPORTS[2])
+
+    # Version D tests
+    def test_vD_mobile_375(self):
+        self._test_version_viewport("vD", VIEWPORTS[0])
+
+    def test_vD_tablet_768(self):
+        self._test_version_viewport("vD", VIEWPORTS[1])
+
+    def test_vD_desktop_1440(self):
+        self._test_version_viewport("vD", VIEWPORTS[2])
 
 
 if __name__ == "__main__":

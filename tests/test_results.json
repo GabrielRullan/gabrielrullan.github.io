@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-10-11T19:58:32Z",
+  "timestamp": "2026-10-11T21:55:55Z",
   "total_suites": 4,
-  "total_tests": 22,
-  "total_passed": 22,
+  "total_tests": 27,
+  "total_passed": 27,
   "total_failed": 0,
   "total_errors": 0,
   "suites": [
@@ -13,18 +13,18 @@
       "passed": 8,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.21,
+      "duration_seconds": 0.27,
       "status": "PASS",
       "issues": []
     },
     {
       "name": "5-Dimension Pairwise Distinctness Rubric",
       "test_class": "TestPairwiseDistinctness",
-      "total": 1,
-      "passed": 1,
+      "total": 3,
+      "passed": 3,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.06,
+      "duration_seconds": 0.18,
       "status": "PASS",
       "issues": []
     },
@@ -35,22 +35,22 @@
       "passed": 7,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.22,
+      "duration_seconds": 0.31,
       "status": "PASS",
       "issues": []
     },
     {
       "name": "Headless Chrome Responsive, Overflow & Runtime Audit",
       "test_class": "TestHeadlessResponsive",
-      "total": 6,
-      "passed": 6,
+      "total": 9,
+      "passed": 9,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 11.12,
+      "duration_seconds": 16.08,
       "status": "PASS",
       "issues": []
     }
   ],
-  "duration_seconds": 11.61,
+  "duration_seconds": 16.84,
   "status": "PASSED"
 }

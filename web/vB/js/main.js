@@ -1,6 +1,6 @@
 /**
  * Version B: Approachable Fractional Data Partner
- * Interactive Scripts: Navigation, FAQ Accordion, ROI Calculator
+ * Interactive Scripts: Navigation, FAQ Accordion, Smooth Scroll
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,48 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Interactive Fractional vs Full-Time Savings Calculator
-  const stageSelect = document.getElementById('company-stage-select');
-  const savingsDisplay = document.getElementById('calc-savings-display');
-  const fulltimeDisplay = document.getElementById('calc-fulltime-cost');
-  const fractionalDisplay = document.getElementById('calc-fractional-cost');
-  const timelineDisplay = document.getElementById('calc-timeline-display');
-
-  const stageData = {
-    seed: {
-      fullTime: '€180,000 / yr',
-      fractional: 'Flexible Sprint / Part-time',
-      savings: '€110,000+',
-      timeline: 'First Single Source of Truth in 14 Days'
-    },
-    growth: {
-      fullTime: '€240,000 / yr',
-      fractional: 'On-Demand Fractional CDO',
-      savings: '€150,000+',
-      timeline: 'Audited Stack & Automated Dashboards in 4 Weeks'
-    },
-    scaleup: {
-      fullTime: '€320,000+ / yr',
-      fractional: 'Strategic Fractional Partnership',
-      savings: '€200,000+',
-      timeline: 'Cross-system MDM & Governance in 6 Weeks'
-    }
-  };
-
-  if (stageSelect && savingsDisplay && fulltimeDisplay && fractionalDisplay && timelineDisplay) {
-    const updateCalculator = () => {
-      const selected = stageSelect.value;
-      const data = stageData[selected] || stageData.growth;
-      
-      savingsDisplay.textContent = data.savings;
-      fulltimeDisplay.textContent = data.fullTime;
-      fractionalDisplay.textContent = data.fractional;
-      timelineDisplay.textContent = data.timeline;
-    };
-
-    stageSelect.addEventListener('change', updateCalculator);
-    updateCalculator();
-  }
 
   // 5. Accessible Smooth Scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

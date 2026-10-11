@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 76" width="480" height="76" fill="none">
+  <!-- Hexagonal Strategic Diamond Crest -->
+  <g transform="translate(8, 6)">
+    <!-- Outer Shield / Hexagonal Facets -->
+    <path d="M32 2 L58 17 L58 47 L32 62 L6 47 L6 17 Z" fill="#0e1726" stroke="#d97706" stroke-width="2.5" stroke-linejoin="round"/>
+    
+    <!-- Top & Right Accent Facets -->
+    <path d="M32 2 L58 17 L32 32 L6 17 Z" fill="#172033" opacity="0.9"/>
+    <path d="M32 32 L58 17 L58 47 L32 62 Z" fill="#202c40" opacity="0.95"/>
+    <path d="M32 32 L32 62 L6 47 L6 17 Z" fill="#0e1726"/>
+
+    <!-- Central Strategic Isometric Diamond / Emerald Prism Node -->
+    <polygon points="32,16 45,24 45,40 32,48 19,40 19,24" fill="#056a3e" stroke="#10b981" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="32,16 45,24 32,32 19,24" fill="#10b981" opacity="0.85"/>
+    <polygon points="32,32 45,24 45,40 32,48" fill="#045230"/>
+
+    <!-- Geometric G & Convergence Nodes -->
+    <circle cx="32" cy="32" r="3" fill="#fbbf24"/>
+    <line x1="32" y1="32" x2="45" y2="24" stroke="#fbbf24" stroke-width="1.5"/>
+    <line x1="32" y1="32" x2="32" y2="48" stroke="#fbbf24" stroke-width="1.5"/>
+    <line x1="32" y1="32" x2="19" y2="24" stroke="#fbbf24" stroke-width="1.5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(82, 0)">
+    <!-- Primary Title -->
+    <text x="0" y="29" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="1.5" fill="#0e1726">
+      GABRIEL RUL-LAN
+    </text>
+    
+    <!-- Subtitle: Executive Positioning -->
+    <text x="0" y="47" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" letter-spacing="2" fill="#056a3e">
+      DIRECTOR DE DATOS FRACCIONAL
+    </text>
+
+    <!-- Accreditation & Focus -->
+    <text x="0" y="62" font-family="'DM Sans', system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="1.2" fill="#b45309">
+      GOBIERNO DEL DATO · CERTIFICADO PMP® · ESTRATEGIA ANALÍTICA
+    </text>
+  </g>
+</svg>
