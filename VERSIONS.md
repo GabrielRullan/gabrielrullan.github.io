@@ -1,28 +1,26 @@
 # Gabriel Rul-lan — Website Redesign: Version Comparison & Promotion Guide
 
-This repository hosts three fully developed, genuinely distinct directions for Gabriel Rul-lan's personal website. Each version presents Gabriel's authentic background (Mathematician from UIB, Executive MBA, PMP® certified, enterprise data governance and analytics leader) through a tailored visual identity, audience framing, and structural design.
+This repository hosts two fully developed, genuinely distinct directions for Gabriel Rul-lan's personal website. Each version presents Gabriel's authentic background (Mathematician from UIB, Executive MBA, PMP® certified, enterprise data governance and analytics leader) through a tailored visual identity, audience framing, and structural design.
 
-All three versions are deployed side-by-side on GitHub Pages at:
+Both versions are deployed side-by-side on GitHub Pages at:
 - **Version A**: [https://www.data-partner.xyz/vA/](https://www.data-partner.xyz/vA/)
 - **Version B**: [https://www.data-partner.xyz/vB/](https://www.data-partner.xyz/vB/)
-- **Version C**: [https://www.data-partner.xyz/vC/](https://www.data-partner.xyz/vC/)
 - **Current Root**: [https://www.data-partner.xyz/](https://www.data-partner.xyz/)
 
 ---
 
-## 1. Executive Summary of the Three Versions
+## 1. Executive Summary of the Two Versions
 
 | Version | Positioning & Concept | Primary Target Audience | Core Value Proposition |
 | :--- | :--- | :--- | :--- |
 | **vA** | **Enterprise Authority & Governance Strategist** | Enterprise CDOs, CIOs, Heads of Data Governance, Pharma & Regulated Enterprises (AstraZeneca, Boehringer Ingelheim, Mapfre). | High-stakes data governance, master data management (MDM), DAMA-DMBOK alignment, and enterprise project governance. |
 | **vB** | **Approachable Fractional Data Partner** | SME Founders, Seed to Series B CEOs, Scaleup Operators (e.g. Movinga, SaaS startups) needing CDO guidance without full-time overhead. | "Turn messy data into reliable revenue." Pragmatic 3-step modern data stack roadmaps, executive clarity, transparent fractional tiers. |
-| **vC** | **Applied Mathematician & Systems Builder** | Technical CTOs, Engineering VPs, R&D Labs, Deep-Tech Founders, Hardware/IoT Teams. | First-principles engineering, mathematical optimization, hardware/embedded DIY builds (Arduino/ESP32), robust data architectures. |
 
 ---
 
-## 2. Five-Dimension Pairwise Comparison Matrix
+## 2. Five-Dimension Pairwise Comparison Matrix (vA vs vB)
 
-The three versions were developed to be unmistakably distinct across all 5 key design dimensions:
+The two versions were developed to be unmistakably distinct across all 5 key design dimensions:
 
 ### 1. Color Palette
 - **Version A (Institutional Enterprise)**:
@@ -35,11 +33,6 @@ The three versions were developed to be unmistakably distinct across all 5 key d
   - Accent: Warm Coral (`#F97316`)
   - Supporting: Warm Ivory (`#FAF8F5`), Charcoal (`#1E293B`)
   - Mood: Approachable, collaborative, vibrant, high-trust.
-- **Version C (Terminal Cybernetic)**:
-  - Primary: Void Obsidian (`#0B0F19`)
-  - Accent: Neon Terminal Cyan (`#00F2FE`), Compiler Amber (`#F59E0B`)
-  - Supporting: Terminal Slate (`#161B22`), Code Gray (`#30363D`)
-  - Mood: Deep-tech, algorithmic, nighttime developer workstation.
 
 ### 2. Typography
 - **Version A**:
@@ -50,10 +43,6 @@ The three versions were developed to be unmistakably distinct across all 5 key d
   - Headings: *Plus Jakarta Sans* / *Outfit* (Modern geometric sans-serif)
   - Body: *Plus Jakarta Sans* (High-legibility humanist sans)
   - Character: Friendly, modern tech product, transparent agency.
-- **Version C**:
-  - Headings: *Space Grotesk* (Clean technical sans)
-  - Body & Accents: *JetBrains Mono* / *IBM Plex Mono* (Precision monospace)
-  - Character: Compiler terminal, mathematical paper, hacker workbench.
 
 ### 3. Layout & Structure
 - **Version A**:
@@ -62,19 +51,14 @@ The three versions were developed to be unmistakably distinct across all 5 key d
 - **Version B**:
   - Structure: Problem-Agitation-Solution conversion funnel.
   - Key Sections: Pain Points ("Why Growing Companies Get Stuck With Data"); 3-Step Engagement Model (Audit, Stack, Handover); Fractional CDO Tiers; Interactive ROI & Cost Calculator; Verified Client Testimonials; FAQ Accordion; Discovery Call CTA.
-- **Version C**:
-  - Structure: First-principles engineering portfolio.
-  - Key Sections: Mathematical Foundations Matrix (Graph Theory, Information Entropy, Stochastic Models); Hardware & Maker Lab (Rotary dial controller, ESP32 IoT); Interactive 4-Tab Performance Benchmarks Console; Architectural Deep Dives (dbt, SQL window partitioning, C++ ISR state machines); Production Tech Stack Matrix.
 
 ### 4. Tone of Voice
 - **Version A**: Authoritative, strategic, compliance-focused, risk-mitigating.
 - **Version B**: Empathetic, pragmatic, partner-oriented, business-ROI focused, jargon-free.
-- **Version C**: Analytical, first-principles, builder-first, mathematically rigorous, code-level.
 
 ### 5. Logo & Visual Symbolism
 - **Version A**: Geometric Monogram Crest ("GR") evoking an established advisory firm with classic serif typography.
 - **Version B**: Continuous Infinity Loop / Interconnected Nodes ("dp") symbolizing ongoing partnership and clean data flow.
-- **Version C**: Mathematical Sigma ($\Sigma$) / Circuit node glyph rendered in vector cyan with monospace brackets.
 
 ---
 
@@ -91,9 +75,9 @@ To promote version `vA`, `vB`, or `vC` as the permanent root homepage:
    cd c:\Users\gabri\Documents\cv
    ```
 
-2. **Select your preferred version** (e.g., set `$CHOICE = "vB"` for Version B, or `"vA"`, `"vC"`):
+2. **Select your preferred version** (e.g., set `$CHOICE = "vB"` for Version B, or `"vA"`):
    ```powershell
-   $CHOICE = "vB"  # Change to "vA", "vB", or "vC"
+   $CHOICE = "vB"  # Change to "vA" or "vB"
    ```
 
 3. **Archive the legacy root files (Optional but safe)**:
@@ -160,7 +144,7 @@ If you want to immediately redirect visitors from the root domain (`/`) to your 
 
 ## 4. Verification & Testing
 
-The website redesign includes a 27-test automated test suite covering:
+The website redesign includes a 22-test automated test suite covering:
 - **Fact Integrity** (`tests/test_facts.py`): Validates contact info, education (UIB Math, MBA), PMP certification, verified clients (AstraZeneca, Boehringer Ingelheim, Movinga, Mapfre), and enforces zero disclosure of day rate.
 - **5-Dimension Distinctness** (`tests/test_distinctness.py`): Programmatically evaluates pairwise distinctness across palette, typography, layout, tone, and branding.
 - **HTML & Web Standards** (`tests/test_html_standards.py`): Single `<h1>` per page, valid meta descriptions, OG images, relative link isolation, and image alt text.

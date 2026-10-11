@@ -1,5 +1,5 @@
 """
-tests/test_facts.py - Fact-checking test suite for vA, vB, and vC.
+tests/test_facts.py - Fact-checking test suite for vA and vB.
 
 Verifies:
 1. Contact information: booking URL, contact email, location.
@@ -19,7 +19,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 CV_GEN_DIR = REPO_ROOT / "CV_gen"
 
-VERSIONS = ["vA", "vB", "vC"]
+VERSIONS = ["vA", "vB"]
 
 EXPECTED_BOOKING_URL = "https://calendar.app.google/YbQTidmXT3Bg9wdY8"
 EXPECTED_EMAIL = "gabriel@data-partner.xyz"
@@ -54,10 +54,10 @@ def extract_visible_text(html: str) -> str:
 
 
 class TestFactIntegrity(unittest.TestCase):
-    """Test suite for verifying factual accuracy across vA, vB, and vC."""
+    """Test suite for verifying factual accuracy across vA and vB."""
 
     def test_versions_exist(self):
-        """Check that index.html exists for vA, vB, and vC."""
+        """Check that index.html exists for vA and vB."""
         for v in VERSIONS:
             path = WEB_DIR / v / "index.html"
             self.assertTrue(path.exists(), f"Index file for {v} does not exist at {path}")
@@ -148,7 +148,7 @@ class TestFactIntegrity(unittest.TestCase):
                 c for c in ["astrazeneca", "boehringer", "movinga", "mapfre"]
                 if c in text
             ]
-            # vA (Enterprise) and vC (Systems) cite large enterprise clients; vB (SME Fractional) focuses on scale-ups (Movinga)
+            # vA (Enterprise) cites large enterprise clients; vB (SME Fractional) focuses on scale-ups (Movinga)
             min_expected = 1 if v == "vB" else 2
             self.assertGreaterEqual(
                 len(matched_companies), min_expected,

@@ -1,7 +1,7 @@
 # Test Infrastructure & Verification Architecture
 
 ## Overview
-This document specifies the automated E2E test harness, quality assurance standards, and verification methodologies for the Gabriel Rul-lan Personal Website Redesign project (`web/vA`, `web/vB`, `web/vC`).
+This document specifies the automated E2E test harness, quality assurance standards, and verification methodologies for the Gabriel Rul-lan Personal Website Redesign project (`web/vA`, `web/vB`).
 
 The test suite is written in Python (Python 3.10+ / standard library `unittest` + BeautifulSoup4 + WebSocket CDP) and resides entirely under `tests/`. It provides 100% automated, non-interactive verification across all project requirements.
 
@@ -36,13 +36,13 @@ tests/
   7. **Zero Unmapped Claims**: Scans for hallucinated employers or exaggerated metrics not substantiated in `CV_gen/`.
 
 ### 2. `tests/test_distinctness.py` (5-Dimension Pairwise Rubric)
-- **Objective**: Guarantee that each pair of versions (vA vs vB, vB vs vC, vA vs vC) constitutes a fundamentally distinct positioning and user experience (requiring at least 4 out of 5 distinct dimensions, targeting 5/5).
+- **Objective**: Guarantee that vA vs vB constitutes fundamentally distinct positioning and user experience (requiring at least 4 out of 5 distinct dimensions, targeting 5/5).
 - **The 5 Dimensions**:
-  1. **Palette**: Computes color set overlap (Jaccard dissimilarity) and background tone differentiation (Dark Void vs Warm Ivory vs Crisp Alabaster/Navy).
-  2. **Typography**: Verifies heading and body font family independence (Serif / Inter vs Plus Jakarta Sans / DM Sans vs Space Grotesk / JetBrains Mono).
+  1. **Palette**: Computes color set overlap (Jaccard dissimilarity) and background tone differentiation (Warm Ivory vs Deep Navy).
+  2. **Typography**: Verifies heading and body font family independence (Serif / Inter vs Plus Jakarta Sans).
   3. **Layout Structure**: Inspects DOM section taxonomy, hero hierarchy, card grids, and navigation paradigms.
-  4. **Headline Tone**: Analyzes H1, H2, and hero copy using semantic term profiles (Enterprise Authority vs Fractional Partner vs Systems Builder & Maker).
-  5. **Logo & Favicon Concept**: Inspects vector SVG geometry, primitive paths, and conceptual branding (Monogram Crest vs Collaborative Infinity/DP vs Circuit/Sigma Glyph).
+  4. **Headline Tone**: Analyzes H1, H2, and hero copy using semantic term profiles (Enterprise Authority vs Fractional Partner).
+  5. **Logo & Favicon Concept**: Inspects vector SVG geometry, primitive paths, and conceptual branding (Monogram Crest vs Collaborative Infinity/DP).
 
 ### 3. `tests/test_html_standards.py` (HTML Standards & Performance Budget)
 - **Objective**: Validate semantic HTML5, SEO compliance, accessibility, link integrity, and transfer budget.
@@ -51,12 +51,12 @@ tests/
   2. **SEO Metadata**: Descriptive `<title>` (>=10 chars) and `<meta name="description">` (>=20 chars).
   3. **Open Graph Protocol**: Valid `og:title`, `og:description`, and `og:image` tags.
   4. **Accessibility (Alt Text)**: Every `<img>` tag contains an `alt` attribute; non-decorative images contain descriptive text.
-  5. **Strict Relative Linking**: Prohibits root-leading slashes (`/assets/...`, `/css/...`); ensures pages are fully portable and isolated under `/vA/`, `/vB/`, `/vC/`.
+  5. **Strict Relative Linking**: Prohibits root-leading slashes (`/assets/...`, `/css/...`); ensures pages are fully portable and isolated under `/vA/`, `/vB/`.
   6. **Internal Link Crawling**: Crawls all `<a href>`, `<link href>`, `<script src>`, and `<img src>` to ensure zero 404s, missing files, or broken anchor `#ids`.
   7. **Page Weight Budget**: Asserts total transfer size of HTML and all local assets is strictly under 3 MB.
 
 ### 4. `tests/test_headless_responsive.py` (Headless Browser & Runtime Audit)
-- **Objective**: Render all three versions in a real headless browser engine (Google Chrome 154 or Edge) across mobile (375px), tablet (768px), and desktop (1440px) viewports.
+- **Objective**: Render both versions in a real headless browser engine (Google Chrome or Edge) across mobile (375px), tablet (768px), and desktop (1440px) viewports.
 - **Verification Criteria**:
   1. **Local Server Integration**: Automatically spawns and tears down a local HTTP server (`http://127.0.0.1:8000/`) serving `web/`.
   2. **Chrome DevTools Protocol (CDP)**: Connects directly via WebSocket to monitor browser events in real-time.
@@ -99,5 +99,5 @@ python -m unittest discover tests
 ---
 
 ## Output & Attestation
-- **Screenshots**: Saved to `tests/screenshots/{vA|vB|vC}_{375|768|1440}.png`.
+- **Screenshots**: Saved to `tests/screenshots/{vA|vB}_{375|768|1440}.png`.
 - **JSON Report**: Saved to `tests/test_results.json` containing complete metrics and failure traces (if any).

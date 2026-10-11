@@ -1,7 +1,7 @@
 """
 tests/test_headless_responsive.py - Headless Chrome responsive rendering and runtime audit suite.
 
-Verifies across vA, vB, and vC at 375px, 768px, and 1440px viewports:
+Verifies across vA and vB at 375px, 768px, and 1440px viewports:
 1. No horizontal scrolling (scrollWidth <= window.innerWidth).
 2. Zero console errors.
 3. Zero network 404s / failed requests.
@@ -29,7 +29,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 SCREENSHOTS_DIR = REPO_ROOT / "tests" / "screenshots"
 
-VERSIONS = ["vA", "vB", "vC"]
+VERSIONS = ["vA", "vB"]
 VIEWPORTS = [
     {"name": "mobile", "width": 375, "height": 812, "mobile": True},
     {"name": "tablet", "width": 768, "height": 1024, "mobile": False},
@@ -323,16 +323,6 @@ class TestHeadlessResponsive(unittest.TestCase):
 
     def test_vB_desktop_1440(self):
         self._test_version_viewport("vB", VIEWPORTS[2])
-
-    # Version C tests
-    def test_vC_mobile_375(self):
-        self._test_version_viewport("vC", VIEWPORTS[0])
-
-    def test_vC_tablet_768(self):
-        self._test_version_viewport("vC", VIEWPORTS[1])
-
-    def test_vC_desktop_1440(self):
-        self._test_version_viewport("vC", VIEWPORTS[2])
 
 
 if __name__ == "__main__":

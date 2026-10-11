@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 
-VERSIONS = ["vA", "vB", "vC"]
+VERSIONS = ["vA", "vB"]
 MAX_TRANSFER_WEIGHT_BYTES = 3 * 1024 * 1024  # 3 MB
 
 
