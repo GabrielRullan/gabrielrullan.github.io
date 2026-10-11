@@ -49,7 +49,7 @@ All content is strictly factual and drawn from verified career records in `CV_ge
 - **Interactive Cost Comparison Calculator:**
   - Dynamic selector for Seed, Growth, and Scaleup stages showing €110k–€200k+ annual savings versus full-time executive hires.
 - **Real Client Case Studies:**
-  - *Movinga:* Data platform turnaround, 99.8% pipeline reliability, and Master Data Management (MDM).
+  - *Movinga:* Data platform turnaround, elimination of recurring pipeline failures, and Master Data Management (MDM).
   - *Stealth AI SaaS:* 0-to-1 data roadmap, automated ingestion, and semantic models.
   - *Forensic Compliance & Analytics:* Cross-reconciling massive enterprise datasets and deploying 30+ executive dashboards.
 - **Verified Testimonials (`web/_data/en.yml`):**
@@ -61,7 +61,7 @@ All content is strictly factual and drawn from verified career records in `CV_ge
 - **About Gabriel & Formal Credentials:**
   - BS in Mathematics – Universitat de les Illes Balears (UIB, 2013).
   - Executive MBA – ESERP Business School / UPC (2014).
-  - Project Management Professional (PMP®) – PMI (#1974733).
+  - Project Management Professional (PMP®) – PMI.
   - DAMA-DMBOK Practitioner (Enterprise Data Governance & MDM).
   - Based in Mallorca, Spain (Remote-First worldwide).
 - **Frictionless Booking & Contact:**

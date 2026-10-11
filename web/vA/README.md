@@ -7,7 +7,7 @@ The core value proposition addresses the primary fears of enterprise data execut
 - **Risk Mitigation & Regulatory Compliance:** Preventing regulatory penalties, data breaches, and audit non-conformance.
 - **Defensible Data Operating Models:** Implementing formal DAMA-DMBOK frameworks, establishing Data Domain Working Groups (DDWGs), and assigning clear RACI ownership.
 - **Single Source of Truth:** Standardizing Critical Data Elements (CDEs) to eliminate metric discrepancy across executive steering committees.
-- **Flawless Delivery Execution:** PMP® rigor ensuring multi-million dollar data platforms land on schedule and within budget.
+- **Flawless Delivery Execution:** PMP® rigor ensuring large-scale data platforms land on schedule and within budget.
 
 ---
 
