@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-17T21:04:39Z",
+  "timestamp": "2026-10-17T21:15:24Z",
   "total_suites": 4,
   "total_tests": 32,
   "total_passed": 32,
@@ -13,7 +13,7 @@
       "passed": 8,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.39,
+      "duration_seconds": 0.33,
       "status": "PASS",
       "issues": []
     },
@@ -24,7 +24,7 @@
       "passed": 5,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.29,
+      "duration_seconds": 0.26,
       "status": "PASS",
       "issues": []
     },
@@ -35,7 +35,7 @@
       "passed": 7,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.4,
+      "duration_seconds": 0.37,
       "status": "PASS",
       "issues": []
     },
@@ -46,11 +46,11 @@
       "passed": 12,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 21.19,
+      "duration_seconds": 20.93,
       "status": "PASS",
       "issues": []
     }
   ],
-  "duration_seconds": 22.27,
+  "duration_seconds": 21.89,
   "status": "PASSED"
 }
