@@ -19,7 +19,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 CV_GEN_DIR = REPO_ROOT / "CV_gen"
 
-VERSIONS = ["vA", "vB", "vD"]
+VERSIONS = ["vA", "vB", "vD", "vE"]
 
 EXPECTED_BOOKING_URL = "https://calendar.app.google/YbQTidmXT3Bg9wdY8"
 EXPECTED_EMAIL = "gabriel@data-partner.xyz"

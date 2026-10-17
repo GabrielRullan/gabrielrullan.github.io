@@ -5,16 +5,20 @@ This repository hosts two fully developed, genuinely distinct directions for Gab
 Both versions are deployed side-by-side on GitHub Pages at:
 - **Version A**: [https://www.data-partner.xyz/vA/](https://www.data-partner.xyz/vA/)
 - **Version B**: [https://www.data-partner.xyz/vB/](https://www.data-partner.xyz/vB/)
+- **Version D**: [https://www.data-partner.xyz/vD/](https://www.data-partner.xyz/vD/)
+- **Version E**: [https://www.data-partner.xyz/vE/](https://www.data-partner.xyz/vE/)
 - **Current Root**: [https://www.data-partner.xyz/](https://www.data-partner.xyz/)
 
 ---
 
-## 1. Executive Summary of the Two Versions
+## 1. Executive Summary of the Versions
 
 | Version | Positioning & Concept | Primary Target Audience | Core Value Proposition |
 | :--- | :--- | :--- | :--- |
-| **vA** | **Enterprise Authority & Governance Strategist** | Enterprise CDOs, CIOs, Heads of Data Governance, Pharma & Regulated Enterprises (AstraZeneca, Boehringer Ingelheim, Mapfre). | High-stakes data governance, master data management (MDM), DAMA-DMBOK alignment, and enterprise project governance. |
-| **vB** | **Approachable Fractional Data Partner** | SME Founders, Seed to Series B CEOs, Scaleup Operators (e.g. Movinga, SaaS startups) needing CDO guidance without full-time overhead. | "Turn messy data into reliable revenue." Pragmatic 3-step modern data stack roadmaps, executive clarity, transparent fractional tiers. |
+| **vA** | **Enterprise Authority & Governance Strategist** (English) | Enterprise CDOs, CIOs, Heads of Data Governance, Pharma & Regulated Enterprises (AstraZeneca, Boehringer Ingelheim, Mapfre). | High-stakes data governance, master data management (MDM), DAMA-DMBOK alignment, and enterprise project governance. |
+| **vB** | **Approachable Fractional Data Partner** (English) | SME Founders, Seed to Series B CEOs, Scaleup Operators (e.g. Movinga, SaaS startups) needing CDO guidance without full-time overhead. | "Turn messy data into reliable revenue." Pragmatic 3-step modern data stack roadmaps, executive clarity, fractional partnership. |
+| **vD** | **Director de Datos Fraccional & Socio Estratégico** (Spanish Executive Hybrid) | CEOs, CFOs, COOs of mid-sized high-revenue Spanish enterprises (e.g., Quely, Isdin, retail/industrial scaleups). | Executive bridge between business and technical data. Solves ERP-vs-Excel discrepancies, vendor accountability, and steering committee alignment. |
+| **vE** | **Partner de Datos Cercano y Personal** (Spanish Approachable & Personal) | Founders, CEOs, and operational leaders of growing Spanish SMEs and scaleups. | Warm, personal first-person voice ("Hola, soy Gabriel"). Reassuring "Paso a paso, con orden y calma", rapid 14-day roadmap, 100% client ownership. |
 
 ---
 
@@ -144,10 +148,10 @@ If you want to immediately redirect visitors from the root domain (`/`) to your 
 
 ## 4. Verification & Testing
 
-The website redesign includes a 22-test automated test suite covering:
-- **Fact Integrity** (`tests/test_facts.py`): Validates contact info, education (UIB Math, MBA), PMP certification, verified clients (AstraZeneca, Boehringer Ingelheim, Movinga, Mapfre), and enforces zero disclosure of day rate.
+The website redesign includes a 32-test automated test suite covering:
+- **Fact Integrity** (`tests/test_facts.py`): Validates contact info, education (UIB Math, MBA), PMP certification, verified clients (AstraZeneca, Boehringer Ingelheim, Movinga, Mapfre), and enforces zero disclosure of day rate across vA, vB, vD, and vE.
 - **5-Dimension Distinctness** (`tests/test_distinctness.py`): Programmatically evaluates pairwise distinctness across palette, typography, layout, tone, and branding.
-- **HTML & Web Standards** (`tests/test_html_standards.py`): Single `<h1>` per page, valid meta descriptions, OG images, relative link isolation, and image alt text.
+- **HTML & Web Standards** (`tests/test_html_standards.py`): Single `<h1>` per page, valid meta descriptions, OG images, relative link isolation, and image alt text across all versions.
 - **Headless Chrome Responsive Audit** (`tests/test_headless_responsive.py`): Audits rendering at 375px (mobile), 768px (tablet), and 1440px (desktop) with zero horizontal overflow, zero console errors, zero 404 network errors, and visual screenshot capture.
 
 To run the complete test suite locally at any time:
