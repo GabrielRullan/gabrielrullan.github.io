@@ -915,12 +915,21 @@ p:last-child {
   gap: 1rem;
 }
 
-.testimonial-avatar {
-  width: 48px;
-  height: 48px;
+.testimonial-avatar-initials {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--color-primary-border);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary-border);
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
 }
 
 .testimonial-name {
