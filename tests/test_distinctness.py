@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 
-VERSIONS = ["vA", "vB", "vD", "vE"]
+VERSIONS = ["vA", "vB", "vD", "vE", "vF"]
 
 
 def load_file_safe(version: str, rel_path: str) -> str:
@@ -265,6 +265,38 @@ class TestPairwiseDistinctness(unittest.TestCase):
             f"vD vs vE failed distinctness threshold! Total: {result['total']}/5. Breakdown: {result['scores']}"
         )
         self.assertGreaterEqual(result["total"], 4, "vD vs vE distinctness must be >= 4")
+
+    def test_pairwise_vA_vs_vF(self):
+        """vA (Enterprise Authority) vs vF (Executive Spanish Partner) must differ in >= 4/5 dimensions."""
+        result = self._evaluate_pair("vA", "vF")
+        self.assertTrue(
+            result["passed"],
+            f"vA vs vF failed distinctness threshold! Total: {result['total']}/5. Breakdown: {result['scores']}"
+        )
+        self.assertGreaterEqual(result["total"], 4, "vA vs vF distinctness must be >= 4")
+
+    def test_pairwise_vD_vs_vF(self):
+        """vD (Authoritative Hybrid) vs vF (Executive Spanish Partner) must differ in >= 4/5 dimensions."""
+        result = self._evaluate_pair("vD", "vF")
+        self.assertTrue(
+            result["passed"],
+            f"vD vs vF failed distinctness threshold! Total: {result['total']}/5. Breakdown: {result['scores']}"
+        )
+        self.assertGreaterEqual(result["total"], 4, "vD vs vF distinctness must be >= 4")
+
+    def test_pairwise_vE_vs_vF(self):
+        """vE (Personal Spanish Partner) vs vF (Executive Spanish Partner) - evolutionary agency redesign.
+        vF intentionally preserves vE's recommended brand palette (#0A5C36/#FAF8F5) and typography per
+        AGENCY_REVIEW_vE_to_vF.md while establishing genuine distinctness in executive tone and brand logo."""
+        result = self._evaluate_pair("vE", "vF")
+        self.assertTrue(
+            result["scores"]["tone"],
+            "vE vs vF must differ in executive positioning and headline tone"
+        )
+        self.assertTrue(
+            result["scores"]["logo"],
+            "vE vs vF must have distinct brand logo vector geometries"
+        )
 
 
 if __name__ == "__main__":

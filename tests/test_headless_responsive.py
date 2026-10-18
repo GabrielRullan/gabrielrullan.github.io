@@ -29,7 +29,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 SCREENSHOTS_DIR = REPO_ROOT / "tests" / "screenshots"
 
-VERSIONS = ["vA", "vB", "vD", "vE"]
+VERSIONS = ["vA", "vB", "vD", "vE", "vF"]
 VIEWPORTS = [
     {"name": "mobile", "width": 375, "height": 812, "mobile": True},
     {"name": "tablet", "width": 768, "height": 1024, "mobile": False},
