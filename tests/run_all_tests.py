@@ -29,12 +29,14 @@ import test_facts
 import test_distinctness
 import test_html_standards
 import test_headless_responsive
+import test_brand_kit
 
 SUITES = [
     ("Fact Integrity (CV_gen & Prohibition of Day Rate)", test_facts.TestFactIntegrity),
     ("5-Dimension Pairwise Distinctness Rubric", test_distinctness.TestPairwiseDistinctness),
     ("HTML Standards, SEO, Accessibility, Links & Budget", test_html_standards.TestHtmlStandards),
     ("Headless Chrome Responsive, Overflow & Runtime Audit", test_headless_responsive.TestHeadlessResponsive),
+    ("Personal Freelance Brand Kit Verification", test_brand_kit.TestBrandKit),
 ]
 
 

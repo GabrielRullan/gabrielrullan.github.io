@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" role="img" aria-label="Gabriel Rul-lan — LinkedIn Banner (P2)">
+  <title>Gabriel Rul-lan — LinkedIn Banner (P2)</title>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062E1B" />
+      <stop offset="100%" stop-color="#0A5C36" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bgGrad)" />
+  
+  <!-- Right-side Decorative Brand Watermark -->
+  <g transform="translate(1200, 48) scale(4.2)" opacity="0.12">
+  <path d="M 32,40 C 22,40 14,32 14,24 C 14,16 22,8 32,8 C 42,8 50,22 56,28 C 50,36 42,40 32,40 Z" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <path d="M 48,40 C 58,40 66,32 66,24 C 66,16 58,8 48,8 C 38,8 30,22 24,28 C 30,36 38,40 48,40 Z" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="40" cy="24" r="5" fill="#FB923C"/>
+  <circle cx="20" cy="24" r="2.2" fill="#FB923C"/>
+  <circle cx="60" cy="24" r="2.2" fill="#FB923C"/>
+</g>
+
+  <!-- Main Content (Biased to x >= 380 to avoid avatar cut-out zone on LinkedIn) -->
+  <g transform="translate(390, 0)">
+    <!-- Role Subhead Pill -->
+    <text x="0" y="82" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">STRATEGIC DATA PARTNER &amp; GOVERNANCE</text>
+    
+    <!-- Gabriel Rul-lan Name -->
+    <text x="0" y="132" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Gabriel Rul-lan</text>
+    
+    <!-- Primary Strategic Headline -->
+    <text x="0" y="196" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC" letter-spacing="-0.01em">Fractional Data Director &amp; Strategic Partner for Executive Teams</text>
+    
+    <!-- Supporting Mission Copy -->
+    <text x="0" y="238" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="17" font-weight="500" fill="#CBD5E1">Data governance, executive clarity, and trusted metrics without agency bloat · data-partner.xyz</text>
+    
+    <!-- Credential Trust Badges -->
+    <g transform="translate(0, 278)">
+      <rect x="0" y="0" width="220" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#15803D" stroke-width="1.2"/>
+      <text x="110" y="24" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">Degree in Mathematics</text>
+      
+      <rect x="235" y="0" width="165" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#15803D" stroke-width="1.2"/>
+      <text x="317" y="24" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">Executive MBA</text>
+      
+      <rect x="415" y="0" width="160" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#15803D" stroke-width="1.2"/>
+      <text x="495" y="24" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">PMP® Certified</text>
+    </g>
+  </g>
+</svg>

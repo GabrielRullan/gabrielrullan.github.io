@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" role="img" aria-label="Gabriel Rul-lan — Banner de LinkedIn (P3)">
+  <title>Gabriel Rul-lan — Banner de LinkedIn (P3)</title>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B" />
+      <stop offset="100%" stop-color="#1C2541" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bgGrad)" />
+  
+  <!-- Right-side Decorative Brand Watermark -->
+  <g transform="translate(1200, 48) scale(4.2)" opacity="0.12">
+  <polygon points="40,6 68,22 68,54 40,70 12,54 12,22" fill="#FFFFFF"/>
+  <polygon points="40,24 44,34 54,38 44,42 40,52 36,42 26,38 36,34" fill="#FBBF24"/>
+  <circle cx="40" cy="38" r="2.5" fill="#FFFFFF"/>
+</g>
+
+  <!-- Main Content (Biased to x >= 380 to avoid avatar cut-out zone on LinkedIn) -->
+  <g transform="translate(390, 0)">
+    <!-- Role Subhead Pill -->
+    <text x="0" y="82" font-family="'Outfit', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FBBF24" letter-spacing="0.14em">DIRECCIÓN DE PROGRAMAS DE DATOS &amp; IT (PMP®)</text>
+    
+    <!-- Gabriel Rul-lan Name -->
+    <text x="0" y="132" font-family="'Outfit', system-ui, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Gabriel Rul-lan</text>
+    
+    <!-- Primary Strategic Headline -->
+    <text x="0" y="196" font-family="'Outfit', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC" letter-spacing="-0.01em">Dirección de Datos &amp; Estrategia para Comités de Dirección</text>
+    
+    <!-- Supporting Mission Copy -->
+    <text x="0" y="238" font-family="'Outfit', system-ui, sans-serif" font-size="17" font-weight="500" fill="#CBD5E1">Rigor analítico, gobierno del dato y decisiones directivas sin fricción · data-partner.xyz</text>
+    
+    <!-- Credential Trust Badges -->
+    <g transform="translate(0, 278)">
+      <rect x="0" y="0" width="220" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#3A506B" stroke-width="1.2"/>
+      <text x="110" y="24" font-family="'Outfit', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">Licenciado en Matemáticas</text>
+      
+      <rect x="235" y="0" width="165" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#3A506B" stroke-width="1.2"/>
+      <text x="317" y="24" font-family="'Outfit', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">Executive MBA</text>
+      
+      <rect x="415" y="0" width="160" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#3A506B" stroke-width="1.2"/>
+      <text x="495" y="24" font-family="'Outfit', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">PMP® Certified</text>
+    </g>
+  </g>
+</svg>

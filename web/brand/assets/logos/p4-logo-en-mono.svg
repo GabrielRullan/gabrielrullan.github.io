@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="80" viewBox="0 0 420 80" fill="none" role="img" aria-label="Gabriel Rul-lan — Data Partner">
+  <title>Gabriel Rul-lan — Data Partner</title>
+  <g id="logo-mark" transform="translate(4, 0)">
+  <path d="M 14,58 C 12,42 18,20 36,16 C 50,12 60,22 56,36 C 52,48 38,54 26,50 C 18,46 16,36 22,30 C 28,24 38,26 42,32 L 32,32" fill="none" stroke="#0F4C5C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="42,32 50,38 68,38" fill="none" stroke="#0F4C5C" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="46" y="44" width="6" height="6" rx="1.5" fill="#0F4C5C"/>
+  <rect x="56" y="44" width="6" height="6" rx="1.5" fill="#0F4C5C"/>
+  <rect x="66" y="44" width="6" height="6" rx="1.5" fill="#0F4C5C"/>
+  <rect x="46" y="54" width="6" height="6" rx="1.5" fill="#0F4C5C"/>
+  <rect x="56" y="54" width="6" height="6" rx="1.5" fill="#0F4C5C"/>
+  <rect x="66" y="54" width="6" height="6" rx="1.5" fill="#0F4C5C"/>
+  </g>
+  <g id="logo-text" transform="translate(94, 0)">
+    <text x="0" y="37" font-family="'Sora', system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#0F4C5C" letter-spacing="-0.01em">Gabriel Rul-lan</text>
+    <text x="0" y="58" font-family="'DM Sans', -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0F4C5C" letter-spacing="0.04em">— Data Partner</text>
+  </g>
+</svg>

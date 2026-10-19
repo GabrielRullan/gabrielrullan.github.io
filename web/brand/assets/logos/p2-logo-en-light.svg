@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="80" viewBox="0 0 420 80" fill="none" role="img" aria-label="Gabriel Rul-lan — Data Partner">
+  <title>Gabriel Rul-lan — Data Partner</title>
+  <g id="logo-mark" transform="translate(4, 0)">
+  <path d="M 32,40 C 22,40 14,32 14,24 C 14,16 22,8 32,8 C 42,8 50,22 56,28 C 50,36 42,40 32,40 Z" fill="none" stroke="#0A5C36" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M 48,40 C 58,40 66,32 66,24 C 66,16 58,8 48,8 C 38,8 30,22 24,28 C 30,36 38,40 48,40 Z" fill="none" stroke="#15803D" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="40" cy="24" r="5" fill="#EA580C"/>
+  <circle cx="40" cy="24" r="2.8" fill="#FFFFFF"/>
+  <circle cx="20" cy="24" r="2.2" fill="#EA580C"/>
+  <circle cx="60" cy="24" r="2.2" fill="#EA580C"/>
+  </g>
+  <g id="logo-text" transform="translate(94, 0)">
+    <text x="0" y="37" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1F2937" letter-spacing="-0.01em">Gabriel Rul-lan</text>
+    <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0A5C36" letter-spacing="0.04em">— Data Partner</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none" role="img" aria-label="Gabriel Rul-lan — Icon Mark">
+  <title>Gabriel Rul-lan — Icon Mark</title>
+  <polygon points="40,6 68,22 68,54 40,70 12,54 12,22" fill="#0B132B" opacity="0.95"/>
+  <polygon points="40,6 68,22 40,38 12,22" fill="#1C2541" opacity="0.85"/>
+  <polygon points="40,38 68,22 68,54 40,70" fill="#0B132B" opacity="0.9"/>
+  <polygon points="40,38 40,70 12,54 12,22" fill="#1C2541" opacity="0.8"/>
+  <polygon points="40,24 44,34 54,38 44,42 40,52 36,42 26,38 36,34" fill="#D97706"/>
+  <circle cx="40" cy="38" r="2.5" fill="#FFFFFF"/>
+</svg>

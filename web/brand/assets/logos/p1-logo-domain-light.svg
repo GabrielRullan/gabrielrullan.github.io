@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="80" viewBox="0 0 420 80" fill="none" role="img" aria-label="Gabriel Rul-lan · data-partner.xyz">
+  <title>Gabriel Rul-lan · data-partner.xyz</title>
+  <g id="logo-mark" transform="translate(4, 0)">
+  <line x1="12" y1="68" x2="68" y2="68" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="12" y1="12" x2="12" y2="68" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="12" y1="40" x2="18" y2="40" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="62" x2="40" y2="68" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 22,20 L 58,20 L 38,38 L 56,56 L 22,56 L 22,48 L 44,48 L 32,36 L 46,24 L 22,24 Z" fill="#1E293B" fill-rule="evenodd"/>
+  <circle cx="48" cy="24" r="3.5" fill="#C2410C"/>
+  <circle cx="38" cy="38" r="3" fill="#C2410C"/>
+  </g>
+  <g id="logo-text" transform="translate(94, 0)">
+    <text x="0" y="37" font-family="'Newsreader', 'Georgia', serif" font-size="22" font-weight="700" fill="#0F172A" letter-spacing="-0.01em">Gabriel Rul-lan</text>
+    <text x="0" y="58" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="600" fill="#475569" letter-spacing="0.04em">· data-partner.xyz</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="80" viewBox="0 0 420 80" fill="none" role="img" aria-label="Gabriel Rul-lan — Partner de Datos">
+  <title>Gabriel Rul-lan — Partner de Datos</title>
+  <g id="logo-mark" transform="translate(4, 0)">
+  <polygon points="40,6 68,22 68,54 40,70 12,54 12,22" fill="#0B132B" opacity="0.95"/>
+  <polygon points="40,6 68,22 40,38 12,22" fill="#0B132B" opacity="0.85"/>
+  <polygon points="40,38 68,22 68,54 40,70" fill="#0B132B" opacity="0.9"/>
+  <polygon points="40,38 40,70 12,54 12,22" fill="#0B132B" opacity="0.8"/>
+  <polygon points="40,24 44,34 54,38 44,42 40,52 36,42 26,38 36,34" fill="#0B132B"/>
+  <circle cx="40" cy="38" r="2.5" fill="#FFFFFF"/>
+  </g>
+  <g id="logo-text" transform="translate(94, 0)">
+    <text x="0" y="37" font-family="'Outfit', system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#0B132B" letter-spacing="-0.01em">Gabriel Rul-lan</text>
+    <text x="0" y="58" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0B132B" letter-spacing="0.04em">— Partner de Datos</text>
+  </g>
+</svg>

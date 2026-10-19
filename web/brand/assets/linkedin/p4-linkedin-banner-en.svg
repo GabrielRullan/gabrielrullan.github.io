@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" role="img" aria-label="Gabriel Rul-lan — LinkedIn Banner (P4)">
+  <title>Gabriel Rul-lan — LinkedIn Banner (P4)</title>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071E26" />
+      <stop offset="100%" stop-color="#0F4C5C" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bgGrad)" />
+  
+  <!-- Right-side Decorative Brand Watermark -->
+  <g transform="translate(1200, 48) scale(4.2)" opacity="0.12">
+  <path d="M 14,58 C 12,42 18,20 36,16 C 50,12 60,22 56,36 C 52,48 38,54 26,50 C 18,46 16,36 22,30 C 28,24 38,26 42,32 L 32,32" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <polyline points="42,32 50,38 68,38" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <rect x="46" y="44" width="6" height="6" rx="1.5" fill="#FB923C"/>
+  <rect x="56" y="44" width="6" height="6" rx="1.5" fill="#FB923C"/>
+  <rect x="66" y="44" width="6" height="6" rx="1.5" fill="#FB923C"/>
+</g>
+
+  <!-- Main Content (Biased to x >= 380 to avoid avatar cut-out zone on LinkedIn) -->
+  <g transform="translate(390, 0)">
+    <!-- Role Subhead Pill -->
+    <text x="0" y="82" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">SENIOR DATA PARTNER &amp; EXECUTIVE DIAGNOSTIC</text>
+    
+    <!-- Gabriel Rul-lan Name -->
+    <text x="0" y="132" font-family="'Sora', system-ui, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Gabriel Rul-lan</text>
+    
+    <!-- Primary Strategic Headline -->
+    <text x="0" y="196" font-family="'Sora', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC" letter-spacing="-0.01em">Fractional Data Director &amp; Strategic Partner for Executive Teams</text>
+    
+    <!-- Supporting Mission Copy -->
+    <text x="0" y="238" font-family="'Sora', system-ui, sans-serif" font-size="17" font-weight="500" fill="#CBD5E1">Data governance, executive clarity, and trusted metrics without agency bloat · data-partner.xyz</text>
+    
+    <!-- Credential Trust Badges -->
+    <g transform="translate(0, 278)">
+      <rect x="0" y="0" width="220" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#1E3A8A" stroke-width="1.2"/>
+      <text x="110" y="24" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">Degree in Mathematics</text>
+      
+      <rect x="235" y="0" width="165" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#1E3A8A" stroke-width="1.2"/>
+      <text x="317" y="24" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">Executive MBA</text>
+      
+      <rect x="415" y="0" width="160" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="#1E3A8A" stroke-width="1.2"/>
+      <text x="495" y="24" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">PMP® Certified</text>
+    </g>
+  </g>
+</svg>
