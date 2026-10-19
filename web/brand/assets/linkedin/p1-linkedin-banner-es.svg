@@ -23,7 +23,7 @@
   <!-- Main Content (Biased to x >= 380 to avoid avatar cut-out zone on LinkedIn) -->
   <g transform="translate(390, 0)">
     <!-- Role Subhead Pill -->
-    <text x="0" y="82" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">DIRECCIÓN DE DATOS FRACCIONAL &amp; ESTRATEGIA</text>
+    <text x="0" y="82" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">DATA PARTNER · DIRECCIÓN DE DATOS Y ESTRATEGIA</text>
     
     <!-- Gabriel Rul-lan Name -->
     <text x="0" y="132" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Gabriel Rul-lan</text>

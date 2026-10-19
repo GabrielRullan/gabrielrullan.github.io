@@ -30,32 +30,32 @@
       accent: '#C2410C',
       muted: '#64748B',
       border: '#E2E8F0',
-      taglineEs: 'Director de Datos Fraccional & Socio Estratégico',
-      taglineEn: 'Fractional Data Director & Strategic Partner'
+      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
+      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
     },
     p2: {
       primary: '#0A5C36',
       accent: '#EA580C',
       muted: '#4B5563',
       border: '#E5E7EB',
-      taglineEs: 'Director de Datos Fraccional & Socio Estratégico',
-      taglineEn: 'Fractional Data Director & Strategic Partner'
+      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
+      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
     },
     p3: {
       primary: '#0B132B',
       accent: '#D97706',
       muted: '#475569',
       border: '#CBD5E1',
-      taglineEs: 'Director de Datos Fraccional & Socio Estratégico',
-      taglineEn: 'Fractional Data Director & Strategic Partner'
+      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
+      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
     },
     p4: {
       primary: '#0F4C5C',
       accent: '#E36414',
       muted: '#52525B',
       border: '#E2E8F0',
-      taglineEs: 'Director de Datos Fraccional & Socio Estratégico',
-      taglineEn: 'Fractional Data Director & Strategic Partner'
+      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
+      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
     }
   };
 
@@ -368,7 +368,7 @@
     // 5. Component Sandbox explicit assets
     var bizLogo = document.getElementById('bizcardLogo');
     if (bizLogo) {
-      bizLogo.src = './assets/logos/' + proposalId + '-logo-es-light.svg';
+      bizLogo.src = './assets/logos/' + proposalId + '-logo-en-light.svg';
     }
 
     var bizMark = document.getElementById('bizcardMark');
@@ -383,7 +383,7 @@
 
     var a4Logo = document.getElementById('a4Logo');
     if (a4Logo) {
-      a4Logo.src = './assets/logos/' + proposalId + '-logo-es-light.svg';
+      a4Logo.src = './assets/logos/' + proposalId + '-logo-en-light.svg';
     }
 
     // 6. Update Email Signature

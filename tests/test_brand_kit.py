@@ -636,12 +636,12 @@ class TestBrandKit(unittest.TestCase):
         self.driver.evaluate("document.querySelector('[data-signature-lang=\"en\"]').click()")
         time.sleep(0.2)
         en_preview = self.driver.evaluate("document.getElementById('signaturePreview').textContent")
-        self.assertIn("Fractional Data Director", en_preview)
+        self.assertIn("Data Partner · Fractional Head of Data", en_preview)
 
         self.driver.evaluate("document.querySelector('[data-signature-lang=\"es\"]').click()")
         time.sleep(0.2)
         es_preview = self.driver.evaluate("document.getElementById('signaturePreview').textContent")
-        self.assertIn("Director de Datos Fraccional", es_preview)
+        self.assertIn("Data Partner · Dirección de Datos y Estrategia", es_preview)
 
         # Clear toast and test visual copy
         self.driver.evaluate("""

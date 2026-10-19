@@ -21,13 +21,13 @@
   <!-- Main Content (Biased to x >= 380 to avoid avatar cut-out zone on LinkedIn) -->
   <g transform="translate(390, 0)">
     <!-- Role Subhead Pill -->
-    <text x="0" y="82" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">SENIOR DATA PARTNER &amp; EXECUTIVE DIAGNOSTIC</text>
+    <text x="0" y="82" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">DATA PARTNER · EXECUTIVE DATA STRATEGY &amp; DIAGNOSTIC</text>
     
     <!-- Gabriel Rul-lan Name -->
     <text x="0" y="132" font-family="'Sora', system-ui, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Gabriel Rul-lan</text>
     
     <!-- Primary Strategic Headline -->
-    <text x="0" y="196" font-family="'Sora', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC" letter-spacing="-0.01em">Fractional Data Director &amp; Strategic Partner for Executive Teams</text>
+    <text x="0" y="196" font-family="'Sora', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC" letter-spacing="-0.01em">Data Strategy &amp; Governance for Executive Teams</text>
     
     <!-- Supporting Mission Copy -->
     <text x="0" y="238" font-family="'Sora', system-ui, sans-serif" font-size="17" font-weight="500" fill="#CBD5E1">Data governance, executive clarity, and trusted metrics without agency bloat · data-partner.xyz</text>
