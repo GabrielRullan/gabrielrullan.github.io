@@ -44,7 +44,7 @@ import websocket
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
-BRAND_DIR = WEB_DIR / "brand"
+BRAND_DIR = REPO_ROOT / "brand"
 SCREENSHOTS_DIR = REPO_ROOT / "tests" / "screenshots"
 
 PROPOSALS = ["p1", "p2", "p3", "p4"]
@@ -85,7 +85,7 @@ class LocalWebServer:
         self.thread = None
 
     def start(self):
-        handler = partial(SimpleHTTPRequestHandler, directory=str(WEB_DIR))
+        handler = partial(SimpleHTTPRequestHandler, directory=str(REPO_ROOT))
         ThreadingHTTPServer.allow_reuse_address = True
         try:
             self.httpd = ThreadingHTTPServer(("127.0.0.1", self.port), handler)

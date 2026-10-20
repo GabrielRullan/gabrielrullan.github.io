@@ -1,15 +1,16 @@
 """
-tests/test_facts.py - Fact-checking test suite for vA and vB.
+tests/test_facts.py - Fact-checking & requirements verification suite for live localized pages (/, /es/, /en/, /ca/).
 
 Verifies:
-1. Contact information: booking URL, contact email, location.
-2. Core credentials: UIB Mathematics, MBA (ESERP), PMP (PMI).
-3. Core client/employer facts: AstraZeneca, Boehringer Ingelheim, Movinga, Mapfre.
-4. Strict prohibition of day rate on all versions.
-5. Entity extraction & verification against CV_gen ground truth (zero unmapped entities/claims).
+1. Site structure: Spanish default at /, localized /es/, /en/, /ca/, legacy version at /old/, and vA-vF + brand removed from web/.
+2. Propuesta 2 branding & Opción B positioning across ES, EN, and CA on the vF framework.
+3. Real photos of Gabriel used in web/img/ and brand/assets/.
+4. Single checkmarks (zero redundant SVG checkmarks inside .tier-features li) in #servicios.
+5. Contact information: booking URL, contact email, zero location/remote claims.
+6. Core credentials (UIB Mathematics, Executive MBA ESERP, PMP® PMI) and clients (AstraZeneca, Boehringer Ingelheim, Movinga, Mapfre).
+7. Strict prohibition of day rates or prices across all pages.
 """
 
-import os
 import re
 import unittest
 from pathlib import Path
@@ -17,9 +18,10 @@ from bs4 import BeautifulSoup
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
-CV_GEN_DIR = REPO_ROOT / "CV_gen"
+ARCHIVE_DIR = REPO_ROOT / "archive"
+BRAND_DIR = REPO_ROOT / "brand"
 
-VERSIONS = ["vA", "vB", "vD", "vE", "vF"]
+PAGES = ["", "es", "en", "ca"]
 
 EXPECTED_BOOKING_URL = "https://calendar.app.google/YbQTidmXT3Bg9wdY8"
 EXPECTED_EMAIL = "gabriel@data-partner.xyz"
@@ -38,8 +40,12 @@ DAY_RATE_PATTERNS = [
 ]
 
 
-def get_version_html(v: str) -> str:
-    path = WEB_DIR / v / "index.html"
+def get_page_path(page: str) -> Path:
+    return (WEB_DIR / "index.html") if page == "" else (WEB_DIR / page / "index.html")
+
+
+def get_page_html(page: str) -> str:
+    path = get_page_path(page)
     if not path.exists():
         return ""
     return path.read_text(encoding="utf-8")
@@ -55,105 +61,126 @@ def extract_visible_text(html: str) -> str:
 
 
 class TestFactIntegrity(unittest.TestCase):
-    """Test suite for verifying factual accuracy across vA and vB."""
+    """Test suite verifying factual accuracy, localization, branding, and structural requirements."""
 
-    def test_versions_exist(self):
-        """Check that index.html exists for vA and vB."""
-        for v in VERSIONS:
-            path = WEB_DIR / v / "index.html"
-            self.assertTrue(path.exists(), f"Index file for {v} does not exist at {path}")
+    def test_site_structure_and_stopped_serving_other_options(self):
+        """Verify /, /es/, /en/, /ca/, and /old/ exist in web/, while vA-vF and brand are stored outside web/."""
+        for p in PAGES:
+            path = get_page_path(p)
+            self.assertTrue(path.is_file(), f"Missing localized page at {path}")
 
-    def test_booking_link_present_and_exact(self):
-        """Verify the exact Google Calendar booking link is present in every version."""
-        for v in VERSIONS:
-            html = get_version_html(v)
-            self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
-            soup = BeautifulSoup(html, "html.parser")
-            booking_anchors = soup.find_all("a", href=lambda h: h and EXPECTED_BOOKING_URL in h)
-            self.assertGreater(
-                len(booking_anchors), 0,
-                f"Version {v} is missing the required booking link {EXPECTED_BOOKING_URL}"
+        self.assertTrue((WEB_DIR / "old" / "index.html").is_file(), "Previous version must be stored in web/old/index.html")
+
+        for removed in ["vA", "vB", "vC", "vD", "vE", "vF", "brand"]:
+            self.assertFalse(
+                (WEB_DIR / removed).exists(),
+                f"Directory web/{removed} must NOT be served in web/ (must be stored outside web/)",
             )
-            for a in booking_anchors:
-                self.assertEqual(
-                    a["href"].strip(), EXPECTED_BOOKING_URL,
-                    f"Version {v} booking link does not match canonical link exactly"
+
+        for archived in ["vA", "vB", "vD", "vE", "vF"]:
+            self.assertTrue((ARCHIVE_DIR / archived / "index.html").is_file(), f"Archived {archived} missing in archive/")
+        self.assertTrue((BRAND_DIR / "index.html").is_file(), "Brand kit missing in brand/index.html")
+
+    def test_default_spanish_and_localized_languages_and_opcion_b(self):
+        """Verify Spanish is served by default at / and /es/, English at /en/, Catalan at /ca/, with Opción B."""
+        expected_langs = {
+            "": ("es", "Data Partner · Estrategia, Analítica y Automatización"),
+            "es": ("es", "Data Partner · Estrategia, Analítica y Automatización"),
+            "en": ("en", "Data Partner · Data Strategy, Analytics & Automation"),
+            "ca": ("ca", "Data Partner · Estratègia, Analítica i Automatització"),
+        }
+        for page, (exp_lang, exp_pill) in expected_langs.items():
+            html = get_page_html(page)
+            soup = BeautifulSoup(html, "html.parser")
+            html_tag = soup.find("html")
+            self.assertIsNotNone(html_tag)
+            self.assertEqual(html_tag.get("lang"), exp_lang, f"Page '{page or '/'}' must have lang='{exp_lang}'")
+            text = extract_visible_text(html)
+            self.assertIn(exp_pill, text, f"Page '{page or '/'}' missing Opción B pill '{exp_pill}'")
+
+    def test_propuesta_2_branding_applied(self):
+        """Verify Propuesta 2 palette and typography are applied in web/css/style.css."""
+        css = (WEB_DIR / "css" / "style.css").read_text(encoding="utf-8")
+        for color in ["#0A5C36", "#15803D", "#EA580C", "#FAF8F5", "#1F2937"]:
+            self.assertIn(color, css, f"Propuesta 2 color {color} missing from web/css/style.css")
+        for font in ["Plus Jakarta Sans", "DM Sans", "Fira Code"]:
+            self.assertIn(font, css, f"Propuesta 2 font {font} missing from web/css/style.css")
+
+    def test_real_photos_used_and_single_checkmarks_in_services(self):
+        """Verify real photos of Gabriel are used and #servicios has zero duplicate SVG checkmarks in .tier-features li."""
+        real_1 = (WEB_DIR / "old" / "assets" / "img" / "profile-img.jpg").read_bytes()
+        real_2 = (WEB_DIR / "old" / "assets" / "img" / "profile-img_2.jpg").read_bytes()
+        self.assertEqual((WEB_DIR / "img" / "gabriel.jpg").read_bytes(), real_1, "web/img/gabriel.jpg must match real photo")
+        self.assertEqual(
+            (WEB_DIR / "img" / "gabriel-partner.jpg").read_bytes(),
+            real_2,
+            "web/img/gabriel-partner.jpg must match real second photo",
+        )
+        self.assertEqual(
+            (BRAND_DIR / "assets" / "img" / "gabriel.jpg").read_bytes(),
+            real_1,
+            "brand/assets/img/gabriel.jpg must match real photo",
+        )
+
+        for p in PAGES:
+            soup = BeautifulSoup(get_page_html(p), "html.parser")
+            imgs = [img.get("src", "") for img in soup.find_all("img")]
+            self.assertTrue(any("gabriel.jpg" in s for s in imgs), f"Page '{p or '/'}' missing gabriel.jpg")
+            self.assertTrue(any("gabriel-partner.jpg" in s for s in imgs), f"Page '{p or '/'}' missing gabriel-partner.jpg")
+
+            # Verify single checkmarks in #servicios (.tier-features li must NOT contain inline <svg>)
+            tier_lis = soup.select("#servicios .tier-features li")
+            self.assertEqual(len(tier_lis), 15, f"Page '{p or '/'}' should have 15 tier feature items")
+            for li in tier_lis:
+                self.assertIsNone(
+                    li.find("svg"),
+                    f"Page '{p or '/'}' has redundant <svg> checkmark inside .tier-features li!",
                 )
 
+    def test_booking_link_present_and_exact(self):
+        """Verify the exact Google Calendar booking link is present in every page."""
+        for p in PAGES:
+            soup = BeautifulSoup(get_page_html(p), "html.parser")
+            booking_anchors = soup.find_all("a", href=lambda h: h and EXPECTED_BOOKING_URL in h)
+            self.assertGreater(len(booking_anchors), 0, f"Page '{p or '/'}' missing booking link")
+            for a in booking_anchors:
+                self.assertEqual(a["href"].strip(), EXPECTED_BOOKING_URL)
+
     def test_contact_email_present_and_valid(self):
-        """Verify valid mailto link with gabriel@data-partner.xyz in every version."""
-        for v in VERSIONS:
-            html = get_version_html(v)
-            self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
-            soup = BeautifulSoup(html, "html.parser")
+        """Verify valid mailto link with gabriel@data-partner.xyz in every page."""
+        for p in PAGES:
+            soup = BeautifulSoup(get_page_html(p), "html.parser")
             email_anchors = soup.find_all(
                 "a", href=lambda h: h and h.lower().startswith("mailto:") and EXPECTED_EMAIL in h.lower()
             )
-            self.assertGreater(
-                len(email_anchors), 0,
-                f"Version {v} is missing the verified contact email {EXPECTED_EMAIL}"
-            )
+            self.assertGreater(len(email_anchors), 0, f"Page '{p or '/'}' missing contact email")
 
     def test_location_mentions(self):
-        """Per explicit user directive (2026-10-11), location/remote mentions are removed across all versions."""
+        """Verify location/remote mentions are absent across all pages."""
         prohibited_terms = ["mallorca", "remote-first", "100% remote", "island base", "barcelona on-site"]
-        for v in VERSIONS:
-            html = get_version_html(v)
-            self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
-            text = extract_visible_text(html).lower()
+        for p in PAGES:
+            text = extract_visible_text(get_page_html(p)).lower()
             for term in prohibited_terms:
-                self.assertNotIn(
-                    term, text,
-                    f"Version {v} must not mention location/remote per user directive (found: '{term}')"
-                )
+                self.assertNotIn(term, text, f"Page '{p or '/'}' must not mention '{term}'")
 
     def test_no_day_rate_displayed(self):
-        """CRITICAL: Strict requirement that NO day rate is present on any version."""
-        for v in VERSIONS:
-            html = get_version_html(v)
-            self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
+        """CRITICAL: Strict requirement that NO day rate is present on any page."""
+        for p in PAGES:
+            html = get_page_html(p)
             for pattern in DAY_RATE_PATTERNS:
                 matches = pattern.findall(html)
-                self.assertEqual(
-                    len(matches), 0,
-                    f"Version {v} violates rate prohibition! Found rate match: {matches} with pattern {pattern.pattern}"
-                )
+                self.assertEqual(len(matches), 0, f"Page '{p or '/'}' violates rate prohibition: {matches}")
 
-    def test_verified_credentials(self):
-        """Verify real credentials (UIB Math, MBA, PMP) appear in each version."""
-        for v in VERSIONS:
-            html = get_version_html(v)
-            self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
-            text = extract_visible_text(html).lower()
-
-            # Math
-            has_math = "mathematics" in text or "matemáticas" in text or "math" in text
-            self.assertTrue(has_math, f"Version {v} missing Mathematics background mention")
-
-            # PMP
-            has_pmp = "pmp" in text or "project management professional" in text
-            self.assertTrue(has_pmp, f"Version {v} missing PMP certification mention")
-
-            # MBA / Business
-            has_mba = "mba" in text or "master in business" in text or "eserp" in text
-            self.assertTrue(has_mba, f"Version {v} missing MBA / Business qualification mention")
-
-    def test_verified_clients_and_employers(self):
-        """Verify real enterprise clients/employers from CV_gen are cited accurately."""
-        for v in VERSIONS:
-            html = get_version_html(v)
-            self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
-            text = extract_visible_text(html).lower()
-            matched_companies = [
-                c for c in ["astrazeneca", "boehringer", "movinga", "mapfre"]
-                if c in text
-            ]
-            # vA (Enterprise) cites large enterprise clients; vB (SME Fractional) focuses on scale-ups (Movinga)
-            min_expected = 1 if v == "vB" else 2
-            self.assertGreaterEqual(
-                len(matched_companies), min_expected,
-                f"Version {v} cites fewer than {min_expected} verified enterprise/scaleup clients (found: {matched_companies})"
-            )
+    def test_verified_credentials_and_clients(self):
+        """Verify real credentials (UIB Math, MBA, PMP) and clients appear in each localized page."""
+        for p in PAGES:
+            text = extract_visible_text(get_page_html(p)).lower()
+            has_math = any(m in text for m in ["mathematics", "matemáticas", "matemàtiques"])
+            self.assertTrue(has_math, f"Page '{p or '/'}' missing Mathematics mention")
+            self.assertIn("pmp", text, f"Page '{p or '/'}' missing PMP mention")
+            self.assertIn("mba", text, f"Page '{p or '/'}' missing MBA mention")
+            for client in ["astrazeneca", "boehringer", "movinga", "mapfre"]:
+                self.assertIn(client, text, f"Page '{p or '/'}' missing client '{client}'")
 
     def test_no_unmapped_fictional_claims(self):
         """Flag any unmapped client or corporate claims not present in CV_gen."""
@@ -161,19 +188,13 @@ class TestFactIntegrity(unittest.TestCase):
             "google lead", "amazon director", "meta cdo", "mckinsey partner",
             "microsoft vp", "apple architect", "harvard phd", "stanford mba",
             "20+ years", "30+ years", "100m revenue", "$100m",
-            # User Directive Prohibitions:
             "99.8%", "5 eu countries", "5 países de la ue", "multi-million", "multimillonari",
             "pmi-id", "pmi id", "pmi #"
         ]
-        for v in VERSIONS:
-            html = get_version_html(v)
-            self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
-            text = extract_visible_text(html).lower()
+        for p in PAGES:
+            text = extract_visible_text(get_page_html(p)).lower()
             for bad_claim in hallucination_indicators:
-                self.assertNotIn(
-                    bad_claim, text,
-                    f"Version {v} contains unmapped or embellished claim: '{bad_claim}'"
-                )
+                self.assertNotIn(bad_claim, text, f"Page '{p or '/'}' contains unmapped claim: '{bad_claim}'")
 
 
 if __name__ == "__main__":

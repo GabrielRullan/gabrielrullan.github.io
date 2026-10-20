@@ -20,12 +20,13 @@ from bs4 import BeautifulSoup
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
+ARCHIVE_DIR = REPO_ROOT / "archive"
 
 VERSIONS = ["vA", "vB", "vD", "vE", "vF"]
 
 
 def load_file_safe(version: str, rel_path: str) -> str:
-    path = WEB_DIR / version / rel_path
+    path = ARCHIVE_DIR / version / rel_path
     if not path.exists():
         return ""
     return path.read_text(encoding="utf-8", errors="ignore")
@@ -120,7 +121,7 @@ def extract_headline_tone(html_content: str) -> dict:
 
 
 def extract_logo_concept(version: str) -> dict:
-    path = WEB_DIR / version / "img" / "logo.svg"
+    path = ARCHIVE_DIR / version / "img" / "logo.svg"
     if not path.exists():
         return {
             "svg_text": "", "num_paths": 0, "num_rects": 0,

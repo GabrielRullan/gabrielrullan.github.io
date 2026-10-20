@@ -19,12 +19,16 @@ from bs4 import BeautifulSoup
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = REPO_ROOT / "web"
 
-VERSIONS = ["vA", "vB", "vD", "vE", "vF"]
+VERSIONS = ["", "es", "en", "ca"]
 MAX_TRANSFER_WEIGHT_BYTES = 3 * 1024 * 1024  # 3 MB
 
 
+def get_version_dir(v: str) -> Path:
+    return WEB_DIR if v == "" else (WEB_DIR / v)
+
+
 def get_version_html(v: str) -> str:
-    path = WEB_DIR / v / "index.html"
+    path = get_version_dir(v) / "index.html"
     if not path.exists():
         return ""
     return path.read_text(encoding="utf-8")
@@ -139,7 +143,7 @@ class TestHtmlStandards(unittest.TestCase):
     def test_internal_links_and_anchors_crawl(self):
         """Crawl all local internal links and anchors to verify zero broken links."""
         for v in VERSIONS:
-            v_dir = WEB_DIR / v
+            v_dir = get_version_dir(v)
             html = get_version_html(v)
             self.assertTrue(bool(html), f"Version {v} index.html is missing or empty")
             soup = BeautifulSoup(html, "html.parser")
@@ -200,7 +204,7 @@ class TestHtmlStandards(unittest.TestCase):
     def test_total_page_transfer_weight_budget(self):
         """Verify total transfer weight of index.html and all local assets is under 3MB."""
         for v in VERSIONS:
-            v_dir = WEB_DIR / v
+            v_dir = get_version_dir(v)
             html_path = v_dir / "index.html"
             self.assertTrue(html_path.exists(), f"Version {v} index.html does not exist")
             total_bytes = html_path.stat().st_size

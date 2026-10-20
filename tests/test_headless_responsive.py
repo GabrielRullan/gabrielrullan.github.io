@@ -237,18 +237,19 @@ class TestHeadlessResponsive(unittest.TestCase):
             cls.server.stop()
 
     def _test_version_viewport(self, version: str, vp: dict):
-        html_path = WEB_DIR / version / "index.html"
-        self.assertTrue(html_path.exists(), f"Cannot test {version}: {html_path} does not exist.")
+        html_path = (WEB_DIR / "index.html") if version == "" else (WEB_DIR / version / "index.html")
+        label = "root_es" if version == "" else version
+        self.assertTrue(html_path.exists(), f"Cannot test {label}: {html_path} does not exist.")
 
-        url = f"http://127.0.0.1:{self.server.port}/{version}/"
+        url = f"http://127.0.0.1:{self.server.port}/" if version == "" else f"http://127.0.0.1:{self.server.port}/{version}/"
         self.driver.set_viewport(vp["width"], vp["height"], vp["mobile"])
         self.driver.navigate(url)
 
         # 1. Screenshot capture
-        screenshot_path = SCREENSHOTS_DIR / f"{version}_{vp['width']}.png"
+        screenshot_path = SCREENSHOTS_DIR / f"{label}_{vp['width']}.png"
         self.driver.capture_screenshot(screenshot_path)
-        self.assertTrue(screenshot_path.exists(), f"Screenshot failed for {version} at {vp['width']}px")
-        self.assertGreater(screenshot_path.stat().st_size, 5000, f"Screenshot empty for {version} at {vp['width']}px")
+        self.assertTrue(screenshot_path.exists(), f"Screenshot failed for {label} at {vp['width']}px")
+        self.assertGreater(screenshot_path.stat().st_size, 5000, f"Screenshot empty for {label} at {vp['width']}px")
 
         # 2. Check no horizontal scrolling
         scroll_check = self.driver.evaluate("""
@@ -264,10 +265,10 @@ class TestHeadlessResponsive(unittest.TestCase):
                 };
             })()
         """)
-        self.assertIsNotNone(scroll_check, f"Failed to evaluate scroll metrics on {version} at {vp['width']}px")
+        self.assertIsNotNone(scroll_check, f"Failed to evaluate scroll metrics on {label} at {vp['width']}px")
         self.assertFalse(
             scroll_check.get("hasOverflow", False),
-            f"Horizontal overflow detected on {version} at {vp['width']}px! "
+            f"Horizontal overflow detected on {label} at {vp['width']}px! "
             f"Doc scrollWidth={scroll_check.get('docScroll')}, Body scrollWidth={scroll_check.get('bodyScroll')}, "
             f"Window innerWidth={scroll_check.get('winWidth')}"
         )
@@ -276,14 +277,14 @@ class TestHeadlessResponsive(unittest.TestCase):
         console_errors = [e for e in self.driver.console_errors if "favicon" not in e.lower()]
         self.assertEqual(
             len(console_errors), 0,
-            f"Console errors detected on {version} at {vp['width']}px: {console_errors}"
+            f"Console errors detected on {label} at {vp['width']}px: {console_errors}"
         )
 
         # 4. Check network failures / 404s
         network_failures = [f for f in self.driver.network_failures if "favicon.ico" not in f]
         self.assertEqual(
             len(network_failures), 0,
-            f"Network errors/404s detected on {version} at {vp['width']}px: {network_failures}"
+            f"Network errors/404s detected on {label} at {vp['width']}px: {network_failures}"
         )
 
         # 5. Check all images loaded
@@ -301,48 +302,48 @@ class TestHeadlessResponsive(unittest.TestCase):
             if not img.get("src", "").startswith("data:"):
                 self.assertTrue(
                     img.get("complete", False) and img.get("naturalWidth", 0) > 0,
-                    f"Broken image detected on {version}: src='{img.get('src')}', naturalWidth={img.get('naturalWidth')}"
+                    f"Broken image detected on {label}: src='{img.get('src')}', naturalWidth={img.get('naturalWidth')}"
                 )
 
-    # Version A tests
-    def test_vA_mobile_375(self):
-        self._test_version_viewport("vA", VIEWPORTS[0])
+    # Root Spanish (/) tests
+    def test_root_es_mobile_375(self):
+        self._test_version_viewport("", VIEWPORTS[0])
 
-    def test_vA_tablet_768(self):
-        self._test_version_viewport("vA", VIEWPORTS[1])
+    def test_root_es_tablet_768(self):
+        self._test_version_viewport("", VIEWPORTS[1])
 
-    def test_vA_desktop_1440(self):
-        self._test_version_viewport("vA", VIEWPORTS[2])
+    def test_root_es_desktop_1440(self):
+        self._test_version_viewport("", VIEWPORTS[2])
 
-    # Version B tests
-    def test_vB_mobile_375(self):
-        self._test_version_viewport("vB", VIEWPORTS[0])
+    # Spanish (/es/) tests
+    def test_es_mobile_375(self):
+        self._test_version_viewport("es", VIEWPORTS[0])
 
-    def test_vB_tablet_768(self):
-        self._test_version_viewport("vB", VIEWPORTS[1])
+    def test_es_tablet_768(self):
+        self._test_version_viewport("es", VIEWPORTS[1])
 
-    def test_vB_desktop_1440(self):
-        self._test_version_viewport("vB", VIEWPORTS[2])
+    def test_es_desktop_1440(self):
+        self._test_version_viewport("es", VIEWPORTS[2])
 
-    # Version D tests
-    def test_vD_mobile_375(self):
-        self._test_version_viewport("vD", VIEWPORTS[0])
+    # English (/en/) tests
+    def test_en_mobile_375(self):
+        self._test_version_viewport("en", VIEWPORTS[0])
 
-    def test_vD_tablet_768(self):
-        self._test_version_viewport("vD", VIEWPORTS[1])
+    def test_en_tablet_768(self):
+        self._test_version_viewport("en", VIEWPORTS[1])
 
-    def test_vD_desktop_1440(self):
-        self._test_version_viewport("vD", VIEWPORTS[2])
+    def test_en_desktop_1440(self):
+        self._test_version_viewport("en", VIEWPORTS[2])
 
-    # Version E tests
-    def test_vE_mobile_375(self):
-        self._test_version_viewport("vE", VIEWPORTS[0])
+    # Catalan (/ca/) tests
+    def test_ca_mobile_375(self):
+        self._test_version_viewport("ca", VIEWPORTS[0])
 
-    def test_vE_tablet_768(self):
-        self._test_version_viewport("vE", VIEWPORTS[1])
+    def test_ca_tablet_768(self):
+        self._test_version_viewport("ca", VIEWPORTS[1])
 
-    def test_vE_desktop_1440(self):
-        self._test_version_viewport("vE", VIEWPORTS[2])
+    def test_ca_desktop_1440(self):
+        self._test_version_viewport("ca", VIEWPORTS[2])
 
 
 if __name__ == "__main__":

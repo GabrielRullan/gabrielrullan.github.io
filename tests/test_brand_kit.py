@@ -34,7 +34,7 @@ from test_headless_responsive import (
 )
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-BRAND_DIR = REPO_ROOT / "web" / "brand"
+BRAND_DIR = REPO_ROOT / "brand"
 PROPOSALS = ["p1", "p2", "p3", "p4"]
 
 
@@ -74,8 +74,18 @@ class TestBrandKit(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.server = LocalWebServer(port=8000)
-        cls.server.start()
+        from functools import partial
+        from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+        import threading
+        from test_headless_responsive import find_free_port
+
+        cls.server = LocalWebServer(port=find_free_port())
+        handler = partial(SimpleHTTPRequestHandler, directory=str(REPO_ROOT))
+        ThreadingHTTPServer.allow_reuse_address = True
+        cls.server.httpd = ThreadingHTTPServer(("127.0.0.1", cls.server.port), handler)
+        cls.server.thread = threading.Thread(target=cls.server.httpd.serve_forever, daemon=True)
+        cls.server.thread.start()
+        time.sleep(0.5)
 
         browser_path = find_browser_executable()
         cls.driver = ChromeHeadlessDriver(browser_path)
@@ -89,13 +99,14 @@ class TestBrandKit(unittest.TestCase):
             cls.server.stop()
 
     def test_brand_kit_file_structure(self):
-        """Verifies existence of core files, 96 logos, 24 linkedin assets, 8 signatures, images, templates."""
+        """Verifies existence of core files in brand/ (not web/brand/), 96 logos, 24 linkedin assets, 8 signatures, images, templates."""
+        self.assertFalse((REPO_ROOT / "web" / "brand").exists(), "web/brand must NOT exist (stored outside web/)")
         # 1. Core pages and stylesheets
-        self.assertTrue((BRAND_DIR / "index.html").is_file(), "web/brand/index.html missing")
-        self.assertTrue((BRAND_DIR / "css" / "brand.css").is_file(), "web/brand/css/brand.css missing")
-        self.assertTrue((BRAND_DIR / "js" / "brand.js").is_file(), "web/brand/js/brand.js missing")
+        self.assertTrue((BRAND_DIR / "index.html").is_file(), "brand/index.html missing")
+        self.assertTrue((BRAND_DIR / "css" / "brand.css").is_file(), "brand/css/brand.css missing")
+        self.assertTrue((BRAND_DIR / "js" / "brand.js").is_file(), "brand/js/brand.js missing")
         self.assertTrue((BRAND_DIR / "templates" / "a4-report.html").is_file(), "a4-report.html missing")
-        self.assertTrue((BRAND_DIR / "favicon.ico").is_file(), "web/brand/favicon.ico missing")
+        self.assertTrue((BRAND_DIR / "favicon.ico").is_file(), "brand/favicon.ico missing")
 
         # 2. Key images
         self.assertTrue((BRAND_DIR / "assets" / "img" / "gabriel.jpg").is_file(), "gabriel.jpg missing")

@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-18T11:05:09Z",
-  "total_suites": 4,
-  "total_tests": 35,
-  "total_passed": 35,
+  "timestamp": "2026-10-20T16:13:12Z",
+  "total_suites": 5,
+  "total_tests": 48,
+  "total_passed": 48,
   "total_failed": 0,
   "total_errors": 0,
   "suites": [
     {
       "name": "Fact Integrity (CV_gen & Prohibition of Day Rate)",
       "test_class": "TestFactIntegrity",
-      "total": 8,
-      "passed": 8,
+      "total": 10,
+      "passed": 10,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.42,
+      "duration_seconds": 0.51,
       "status": "PASS",
       "issues": []
     },
@@ -24,7 +24,7 @@
       "passed": 8,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.4,
+      "duration_seconds": 0.45,
       "status": "PASS",
       "issues": []
     },
@@ -35,7 +35,7 @@
       "passed": 7,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.43,
+      "duration_seconds": 0.39,
       "status": "PASS",
       "issues": []
     },
@@ -46,11 +46,22 @@
       "passed": 12,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 20.85,
+      "duration_seconds": 20.94,
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Personal Freelance Brand Kit Verification",
+      "test_class": "TestBrandKit",
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "errors": 0,
+      "duration_seconds": 22.1,
       "status": "PASS",
       "issues": []
     }
   ],
-  "duration_seconds": 22.1,
+  "duration_seconds": 44.39,
   "status": "PASSED"
 }

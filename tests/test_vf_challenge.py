@@ -253,7 +253,7 @@ class TestVFResponsiveDOM(unittest.TestCase):
             cls.server.stop()
 
     def setUp(self):
-        self.base_url = f"http://127.0.0.1:{self.server.port}/vF/"
+        self.base_url = f"http://127.0.0.1:{self.server.port}/"
 
     def test_01_responsive_and_overflow_across_viewports(self):
         """Test 375x812, 768x1024, 1440x900 plus edge cases (320px, 1920px) for zero overflow."""
