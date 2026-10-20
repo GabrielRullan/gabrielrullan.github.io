@@ -473,9 +473,15 @@ class TestBrandKit(unittest.TestCase):
             r"baleares",
         ]
 
-        # Scan all text files in web/brand/
+        # Scan all text/svg files in brand/
+        forbidden_role_patterns = [
+            r"direcci[oó]n\s+de\s+datos",
+            r"fractional",
+            r"fraccional",
+            r"head\s+of\s+data",
+        ]
         for p in BRAND_DIR.rglob("*"):
-            if p.is_file() and p.suffix in {".html", ".css", ".js"}:
+            if p.is_file() and p.suffix in {".html", ".css", ".js", ".svg"}:
                 content = p.read_text(encoding="utf-8")
                 for pat in price_patterns:
                     matches = re.findall(pat, content, re.IGNORECASE)
@@ -488,6 +494,12 @@ class TestBrandKit(unittest.TestCase):
                     self.assertFalse(
                         matches,
                         f"Location/remote violation '{pat}' in {p.relative_to(REPO_ROOT)}: {matches}",
+                    )
+                for pat in forbidden_role_patterns:
+                    matches = re.findall(pat, content, re.IGNORECASE)
+                    self.assertFalse(
+                        matches,
+                        f"Outdated non-Opción-B role violation '{pat}' in {p.relative_to(REPO_ROOT)}: {matches}",
                     )
 
         # 3. Portrait verification

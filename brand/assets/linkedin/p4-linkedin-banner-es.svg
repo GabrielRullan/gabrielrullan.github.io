@@ -21,13 +21,13 @@
   <!-- Main Content (Biased to x >= 380 to avoid avatar cut-out zone on LinkedIn) -->
   <g transform="translate(390, 0)">
     <!-- Role Subhead Pill -->
-    <text x="0" y="82" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">DATA PARTNER · DIRECCIÓN DE DATOS Y DIAGNÓSTICO EJECUTIVO</text>
+    <text x="0" y="82" font-family="'Sora', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FB923C" letter-spacing="0.14em">DATA PARTNER · ESTRATEGIA, ANALÍTICA Y AUTOMATIZACIÓN</text>
     
     <!-- Gabriel Rul-lan Name -->
     <text x="0" y="132" font-family="'Sora', system-ui, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Gabriel Rul-lan</text>
     
     <!-- Primary Strategic Headline -->
-    <text x="0" y="196" font-family="'Sora', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC" letter-spacing="-0.01em">Dirección de Datos &amp; Estrategia para Comités de Dirección</text>
+    <text x="0" y="196" font-family="'Sora', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC" letter-spacing="-0.01em">Estrategia, Analítica y Automatización para Comités de Dirección</text>
     
     <!-- Supporting Mission Copy -->
     <text x="0" y="238" font-family="'Sora', system-ui, sans-serif" font-size="17" font-weight="500" fill="#CBD5E1">Rigor analítico, gobierno del dato y decisiones directivas sin fricción · data-partner.xyz</text>
