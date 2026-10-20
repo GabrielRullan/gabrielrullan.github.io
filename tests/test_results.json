@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-20T16:13:12Z",
+  "timestamp": "2026-10-20T16:36:56Z",
   "total_suites": 5,
-  "total_tests": 48,
-  "total_passed": 48,
+  "total_tests": 49,
+  "total_passed": 49,
   "total_failed": 0,
   "total_errors": 0,
   "suites": [
     {
       "name": "Fact Integrity (CV_gen & Prohibition of Day Rate)",
       "test_class": "TestFactIntegrity",
-      "total": 10,
-      "passed": 10,
+      "total": 11,
+      "passed": 11,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.51,
+      "duration_seconds": 0.74,
       "status": "PASS",
       "issues": []
     },
@@ -24,7 +24,7 @@
       "passed": 8,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.45,
+      "duration_seconds": 0.44,
       "status": "PASS",
       "issues": []
     },
@@ -35,7 +35,7 @@
       "passed": 7,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 0.39,
+      "duration_seconds": 0.4,
       "status": "PASS",
       "issues": []
     },
@@ -46,7 +46,7 @@
       "passed": 12,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 20.94,
+      "duration_seconds": 20.52,
       "status": "PASS",
       "issues": []
     },
@@ -57,11 +57,11 @@
       "passed": 11,
       "failed": 0,
       "errors": 0,
-      "duration_seconds": 22.1,
+      "duration_seconds": 21.97,
       "status": "PASS",
       "issues": []
     }
   ],
-  "duration_seconds": 44.39,
+  "duration_seconds": 44.06,
   "status": "PASSED"
 }

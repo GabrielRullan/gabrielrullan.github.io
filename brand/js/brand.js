@@ -171,7 +171,7 @@
 '<table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.4; color: ' + data.primary + '; background: transparent; border-collapse: collapse;">\n' +
 '  <tr>\n' +
 '    <td valign="middle" style="padding-right: 16px; vertical-align: middle;">\n' +
-'      <img src="https://www.data-partner.xyz/brand/assets/img/gabriel.jpg" alt="Gabriel Rul-lan" width="68" height="68" style="display: block; width: 68px; height: 68px; border-radius: 50%; object-fit: cover; border: 2px solid ' + data.accent + ';" />\n' +
+'      <img src="https://www.data-partner.xyz/img/gabriel.jpg" alt="Gabriel Rul-lan" width="68" height="68" style="display: block; width: 68px; height: 68px; border-radius: 50%; object-fit: cover; border: 2px solid ' + data.accent + ';" />\n' +
 '    </td>\n' +
 '    <td valign="middle" style="padding-left: 16px; border-left: 2px solid ' + data.accent + '; vertical-align: middle;">\n' +
 '      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">\n' +
@@ -222,7 +222,7 @@
     var htmlString = generateSignatureHtml(proposalId, lang);
 
     if (previewContainer) {
-      var localPreviewHtml = htmlString.replace('https://www.data-partner.xyz/brand/assets/img/gabriel.jpg', './assets/img/gabriel.jpg');
+      var localPreviewHtml = htmlString.replace('https://www.data-partner.xyz/img/gabriel.jpg', './assets/img/gabriel.jpg');
       previewContainer.innerHTML = localPreviewHtml;
     }
     if (codeBlock) {
@@ -240,7 +240,7 @@
       return;
     }
 
-    var htmlContent = previewContainer.innerHTML.replace('./assets/img/gabriel.jpg', 'https://www.data-partner.xyz/brand/assets/img/gabriel.jpg');
+    var htmlContent = previewContainer.innerHTML.replace('./assets/img/gabriel.jpg', 'https://www.data-partner.xyz/img/gabriel.jpg');
     var textContent = previewContainer.innerText || previewContainer.textContent;
 
     var copied = false;

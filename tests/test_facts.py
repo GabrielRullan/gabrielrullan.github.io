@@ -196,6 +196,38 @@ class TestFactIntegrity(unittest.TestCase):
             for bad_claim in hallucination_indicators:
                 self.assertNotIn(bad_claim, text, f"Page '{p or '/'}' contains unmapped claim: '{bad_claim}'")
 
+    def test_old_site_hero_grammar_and_link_integrity(self):
+        """Verify /old/ hero typed sentence is grammatically ordered and zero broken local links exist across web/, brand/, and archive/."""
+        for old_es in [WEB_DIR / "old" / "index.html", WEB_DIR / "old" / "es" / "index.html"]:
+            content = old_es.read_text(encoding="utf-8")
+            self.assertNotIn("Soy un  de Datos", content, f"{old_es} has garbled hero sentence")
+            self.assertIn('Soy un <span class="typed"', content)
+            self.assertIn('></span> de Datos</p>', content)
+
+        old_ca = (WEB_DIR / "old" / "ca" / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn("Sóc  de Dades", old_ca, "web/old/ca/index.html has garbled hero sentence")
+        self.assertIn('Sóc <span class="typed"', old_ca)
+        self.assertIn('></span> de Dades</p>', old_ca)
+
+        for folder in [WEB_DIR, BRAND_DIR, ARCHIVE_DIR]:
+            for html_file in folder.rglob("*.html"):
+                if "legacy_jekyll" in str(html_file):
+                    continue
+                soup = BeautifulSoup(html_file.read_text(encoding="utf-8", errors="ignore"), "html.parser")
+                for tag, attr in [("a", "href"), ("link", "href"), ("script", "src"), ("img", "src")]:
+                    for el in soup.find_all(tag):
+                        val = el.get(attr, "").strip()
+                        if not val or val.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:", "javascript:")):
+                            continue
+                        clean = val.split("#")[0].split("?")[0]
+                        if not clean:
+                            continue
+                        target = (html_file.parent / clean).resolve()
+                        self.assertTrue(
+                            target.exists(),
+                            f"Broken local link in {html_file.relative_to(REPO_ROOT)}: <{tag} {attr}='{val}'> -> {target}",
+                        )
+
 
 if __name__ == "__main__":
     unittest.main()

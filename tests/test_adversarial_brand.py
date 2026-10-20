@@ -414,10 +414,10 @@ class TestAdversarialBrandKit(unittest.TestCase):
                     };
                 })()
             """)
-            self.assertIn(f"{target_p}-logo-es-light.svg", sandbox_assets["bizLogo"])
+            self.assertIn(f"{target_p}-logo-en-light.svg", sandbox_assets["bizLogo"])
             self.assertIn(f"{target_p}-logo-icon-light.svg", sandbox_assets["bizMark"])
             self.assertIn(f"{target_p}-linkedin-banner-es.png", sandbox_assets["liBanner"])
-            self.assertIn(f"{target_p}-logo-es-light.svg", sandbox_assets["a4Logo"])
+            self.assertIn(f"{target_p}-logo-en-light.svg", sandbox_assets["a4Logo"])
             self.assertTrue(sandbox_assets["bizLogoLoaded"])
             self.assertTrue(sandbox_assets["bizMarkLoaded"])
             self.assertTrue(sandbox_assets["liBannerLoaded"])
@@ -546,13 +546,13 @@ class TestAdversarialBrandKit(unittest.TestCase):
         self.driver.evaluate("document.querySelector('[data-signature-lang=\"en\"]').click()")
         time.sleep(0.2)
         en_preview = self.driver.evaluate("document.getElementById('signaturePreview').textContent")
-        self.assertIn("Fractional Data Director", en_preview)
+        self.assertIn("Data Partner · Fractional Head of Data", en_preview)
 
         # 2. Spanish toggle
         self.driver.evaluate("document.querySelector('[data-signature-lang=\"es\"]').click()")
         time.sleep(0.2)
         es_preview = self.driver.evaluate("document.getElementById('signaturePreview').textContent")
-        self.assertIn("Director de Datos Fraccional", es_preview)
+        self.assertIn("Data Partner · Dirección de Datos y Estrategia", es_preview)
 
         # 3. Visual signature copy button
         self.driver.evaluate("document.getElementById('btnCopyVisualSig').click()")
