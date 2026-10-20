@@ -84,12 +84,28 @@ class TestFactIntegrity(unittest.TestCase):
     def test_default_spanish_and_localized_languages_and_opcion_b(self):
         """Verify Spanish is served by default at / and /es/, English at /en/, Catalan at /ca/, with Opción B."""
         expected_langs = {
-            "": ("es", "Data Partner · Estrategia, Analítica y Automatización"),
-            "es": ("es", "Data Partner · Estrategia, Analítica y Automatización"),
-            "en": ("en", "Data Partner · Data Strategy, Analytics & Automation"),
-            "ca": ("ca", "Data Partner · Estratègia, Analítica i Automatització"),
+            "": (
+                "es",
+                "Data Partner · Estrategia, Analítica y Automatización",
+                "Data Partner Continuo (Estrategia, Analítica y Automatización)",
+            ),
+            "es": (
+                "es",
+                "Data Partner · Estrategia, Analítica y Automatización",
+                "Data Partner Continuo (Estrategia, Analítica y Automatización)",
+            ),
+            "en": (
+                "en",
+                "Data Partner · Data Strategy, Analytics & Automation",
+                "Ongoing Data Partner (Strategy, Analytics & Automation)",
+            ),
+            "ca": (
+                "ca",
+                "Data Partner · Estratègia, Analítica i Automatització",
+                "Data Partner Continu (Estratègia, Analítica i Automatització)",
+            ),
         }
-        for page, (exp_lang, exp_pill) in expected_langs.items():
+        for page, (exp_lang, exp_pill, exp_card) in expected_langs.items():
             html = get_page_html(page)
             soup = BeautifulSoup(html, "html.parser")
             html_tag = soup.find("html")
@@ -97,6 +113,9 @@ class TestFactIntegrity(unittest.TestCase):
             self.assertEqual(html_tag.get("lang"), exp_lang, f"Page '{page or '/'}' must have lang='{exp_lang}'")
             text = extract_visible_text(html)
             self.assertIn(exp_pill, text, f"Page '{page or '/'}' missing Opción B pill '{exp_pill}'")
+            self.assertIn(exp_card, text, f"Page '{page or '/'}' missing Opción B service card '{exp_card}'")
+            self.assertNotIn("fraccional", text.lower(), f"Page '{page or '/'}' still contains 'fraccional'")
+            self.assertNotIn("fractional", text.lower(), f"Page '{page or '/'}' still contains 'fractional'")
 
     def test_propuesta_2_branding_applied(self):
         """Verify Propuesta 2 palette and typography are applied in web/css/style.css."""

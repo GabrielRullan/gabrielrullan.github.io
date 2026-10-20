@@ -546,13 +546,13 @@ class TestAdversarialBrandKit(unittest.TestCase):
         self.driver.evaluate("document.querySelector('[data-signature-lang=\"en\"]').click()")
         time.sleep(0.2)
         en_preview = self.driver.evaluate("document.getElementById('signaturePreview').textContent")
-        self.assertIn("Data Partner · Fractional Head of Data", en_preview)
+        self.assertIn("Data Partner · Data Strategy, Analytics & Automation", en_preview)
 
         # 2. Spanish toggle
         self.driver.evaluate("document.querySelector('[data-signature-lang=\"es\"]').click()")
         time.sleep(0.2)
         es_preview = self.driver.evaluate("document.getElementById('signaturePreview').textContent")
-        self.assertIn("Data Partner · Dirección de Datos y Estrategia", es_preview)
+        self.assertIn("Data Partner · Estrategia, Analítica y Automatización", es_preview)
 
         # 3. Visual signature copy button
         self.driver.evaluate("document.getElementById('btnCopyVisualSig').click()")

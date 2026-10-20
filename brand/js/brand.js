@@ -30,32 +30,32 @@
       accent: '#C2410C',
       muted: '#64748B',
       border: '#E2E8F0',
-      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
-      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
+      taglineEs: 'Data Partner · Estrategia, Analítica y Automatización',
+      taglineEn: 'Data Partner · Data Strategy, Analytics & Automation'
     },
     p2: {
       primary: '#0A5C36',
       accent: '#EA580C',
       muted: '#4B5563',
       border: '#E5E7EB',
-      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
-      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
+      taglineEs: 'Data Partner · Estrategia, Analítica y Automatización',
+      taglineEn: 'Data Partner · Data Strategy, Analytics & Automation'
     },
     p3: {
       primary: '#0B132B',
       accent: '#D97706',
       muted: '#475569',
       border: '#CBD5E1',
-      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
-      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
+      taglineEs: 'Data Partner · Estrategia, Analítica y Automatización',
+      taglineEn: 'Data Partner · Data Strategy, Analytics & Automation'
     },
     p4: {
       primary: '#0F4C5C',
       accent: '#E36414',
       muted: '#52525B',
       border: '#E2E8F0',
-      taglineEs: 'Data Partner · Dirección de Datos y Estrategia',
-      taglineEn: 'Data Partner · Fractional Head of Data & Governance'
+      taglineEs: 'Data Partner · Estrategia, Analítica y Automatización',
+      taglineEn: 'Data Partner · Data Strategy, Analytics & Automation'
     }
   };
 

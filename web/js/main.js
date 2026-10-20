@@ -1,5 +1,5 @@
 /**
- * Version F: Senior Strategic Partner & Fractional Data Director
+ * Version F: Senior Data Partner (Strategy, Analytics & Automation)
  * Interactive Scripts: Sticky Header, Mobile Navigation, FAQ Accordion, Smooth Scroll
  */
 
